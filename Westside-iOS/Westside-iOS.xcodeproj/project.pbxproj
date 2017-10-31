@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1F1E01BD1FA2309A00E05229 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01BC1FA2309A00E05229 /* AppDelegate.swift */; };
-		1F1E01BF1FA2309A00E05229 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01BE1FA2309A00E05229 /* ViewController.swift */; };
 		1F1E01C41FA2309A00E05229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E01C31FA2309A00E05229 /* Assets.xcassets */; };
 		1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */; };
 		1F1E01D21FA2309A00E05229 /* Westside_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01D11FA2309A00E05229 /* Westside_iOSTests.swift */; };
 		1F1E01DD1FA2309A00E05229 /* Westside_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */; };
-		1FCE8B721FA7858400CCF223 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCE8B711FA7858400CCF223 /* ViewController.xib */; };
+		1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */; };
+		1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		1F1E01B91FA2309A00E05229 /* Westside-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Westside-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1E01BC1FA2309A00E05229 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F1E01BE1FA2309A00E05229 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F1E01C31FA2309A00E05229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F1E01C61FA2309A00E05229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F1E01C81FA2309A00E05229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +45,8 @@
 		1F1E01D81FA2309A00E05229 /* Westside-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Westside-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westside_iOSUITests.swift; sourceTree = "<group>"; };
 		1F1E01DE1FA2309A00E05229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FCE8B711FA7858400CCF223 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +97,8 @@
 		1F1E01BB1FA2309A00E05229 /* Westside-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1FCB41191FA8B96300B05B67 /* Controller */,
 				1F1E01BC1FA2309A00E05229 /* AppDelegate.swift */,
-				1F1E01BE1FA2309A00E05229 /* ViewController.swift */,
-				1FCE8B711FA7858400CCF223 /* ViewController.xib */,
 				1F1E01C31FA2309A00E05229 /* Assets.xcassets */,
 				1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */,
 				1F1E01C81FA2309A00E05229 /* Info.plist */,
@@ -123,6 +122,15 @@
 				1F1E01DE1FA2309A00E05229 /* Info.plist */,
 			);
 			path = "Westside-iOSUITests";
+			sourceTree = "<group>";
+		};
+		1FCB41191FA8B96300B05B67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */,
+				1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */,
-				1FCE8B721FA7858400CCF223 /* ViewController.xib in Resources */,
+				1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */,
 				1F1E01C41FA2309A00E05229 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1E01BF1FA2309A00E05229 /* ViewController.swift in Sources */,
+				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,
 				1F1E01BD1FA2309A00E05229 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
