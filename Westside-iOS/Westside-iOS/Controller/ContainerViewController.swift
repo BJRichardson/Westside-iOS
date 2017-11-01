@@ -21,7 +21,8 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     @IBOutlet weak var menuLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuOverlayView: UIControl!
     
-//  var contentNavigationController: UINavigationController
+    var westsideTabBarController: WestsideTabBarController
+    var contentNavigationController: UINavigationController
     
     let menuBarButton = UIBarButtonItem(
         image: UIImage(named:"icon_menu.png"),
@@ -51,12 +52,12 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         
-//        contentNavigationController = UINavigationController()
-//        contentNavigationController.navigationBar.tintColor = UIColor.midGray()
+        westsideTabBarController = WestsideTabBarController()
+        contentNavigationController = UINavigationController(rootViewController: westsideTabBarController)
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-//        contentNavigationController.delegate = self
+        contentNavigationController.delegate = self
         
         sidePanelGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(recognizer:)))
         sidePanelGestureRecognizer.delegate = self
@@ -70,13 +71,20 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setUpChildViewController(viewController: menuNavigationController, containerView: menuContainerView)
-//        setUpChildViewController(viewController: contentNavigationController, containerView: contentContainerView)
+//      setUpChildViewController(viewController: menuNavigationController, containerView: menuContainerView)
+        setUpChildViewController(viewController: contentNavigationController, containerView: contentContainerView)
         
         view.addGestureRecognizer(sidePanelGestureRecognizer)
         
-//        contentNavigationController.navigationBar.barTintColor = UIColor.white
-//        menuBarButton.tintColor = UIColor.midGray()
+        contentNavigationController.navigationBar.barTintColor = UIColor.midGray()
+        contentNavigationController.navigationItem.leftBarButtonItem = menuBarButton
+        menuBarButton.tintColor = UIColor.white
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        contentNavigationController.isNavigationBarHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,10 +95,6 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         structureView()
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return !isViewLoaded
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -119,11 +123,6 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         sidePanelGestureRecognizer.isEnabled = true
     }
     
-    func transitionToViewController(viewController: UIViewController) {
-//        contentNavigationController.setViewControllers([viewController], animated: false)
-//        setupContentNavBar(for: viewController)
-    }
-    
     private func overlayAlpha(forMenu: Bool) -> CGFloat {
         return 0.75 / menuContainerView.frame.size.width * menuLeftConstraint.constant + 0.75
     }
@@ -131,9 +130,19 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     private func setupContentNavBar(for viewController: UIViewController) {
         structureView()
         viewController.navigationItem.leftBarButtonItem = menuBarButton
-        //sidePanelGestureRecognizer.isEnabled = contentNavigationController.viewControllers.count == 1
     }
     
+    // MARK: - UINavigationControllerDelegate
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController,
+                              animated: Bool) {
+        navigationController.isNavigationBarHidden = false
+        navigationController.navigationBar.barTintColor = UIColor.primaryColor()
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        viewController.title = "Westside CME"
+        viewController.navigationItem.leftBarButtonItem = menuBarButton
+        menuBarButton.tintColor = UIColor.white
+    }
     
     // MARK: - Pan gesture
     
