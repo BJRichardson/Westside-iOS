@@ -24,6 +24,8 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     var westsideTabBarController: WestsideTabBarController
     var contentNavigationController: UINavigationController
     
+    let reachability: Reachability
+    
     let menuBarButton = UIBarButtonItem(
         image: UIImage(named:"icon_menu.png"),
         style: .plain,
@@ -55,6 +57,8 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         westsideTabBarController = WestsideTabBarController()
         contentNavigationController = UINavigationController(rootViewController: westsideTabBarController)
         
+        reachability = Reachability(hostname: Store.resourceEndpoint)!
+        
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         contentNavigationController.delegate = self
@@ -80,6 +84,13 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         contentNavigationController.navigationItem.leftBarButtonItem = menuBarButton
         menuBarButton.tintColor = UIColor.white
         
+        try? reachability.startNotifier()
+        
+        reachability.whenUnreachable = { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.view.makeToast(NSLocalizedString("No network connection", comment: ""), duration: 5)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -17,6 +17,9 @@
 		1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */; };
 		1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B44B1FAA0E2C00BCEEBD /* UIViewController+Child.swift */; };
 		1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B44D1FAA14BA00BCEEBD /* UIColor+Westside.swift */; };
+		1F99B4521FAA5E5300BCEEBD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4511FAA5E5300BCEEBD /* Reachability.swift */; };
+		1F99B4541FAA5F2200BCEEBD /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4531FAA5F2200BCEEBD /* Toast.swift */; };
+		1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4561FAA5F6A00BCEEBD /* Store.swift */; };
 		1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */; };
 		1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */; };
 /* End PBXBuildFile section */
@@ -55,6 +58,9 @@
 		1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		1F99B44B1FAA0E2C00BCEEBD /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		1F99B44D1FAA14BA00BCEEBD /* UIColor+Westside.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Westside.swift"; sourceTree = "<group>"; };
+		1F99B4511FAA5E5300BCEEBD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		1F99B4531FAA5F2200BCEEBD /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		1F99B4561FAA5F6A00BCEEBD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,7 @@
 		1F1E01BB1FA2309A00E05229 /* Westside-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1F99B4551FAA5F5700BCEEBD /* Store */,
 				1F99B44A1FAA0DF500BCEEBD /* Utilities */,
 				1FCB41191FA8B96300B05B67 /* Controller */,
 				1F1E01BC1FA2309A00E05229 /* AppDelegate.swift */,
@@ -140,8 +147,18 @@
 			children = (
 				1F99B44B1FAA0E2C00BCEEBD /* UIViewController+Child.swift */,
 				1F99B44D1FAA14BA00BCEEBD /* UIColor+Westside.swift */,
+				1F99B4511FAA5E5300BCEEBD /* Reachability.swift */,
+				1F99B4531FAA5F2200BCEEBD /* Toast.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1F99B4551FAA5F5700BCEEBD /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				1F99B4561FAA5F6A00BCEEBD /* Store.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
@@ -291,7 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F99B4521FAA5E5300BCEEBD /* Reachability.swift in Sources */,
+				1F99B4541FAA5F2200BCEEBD /* Toast.swift in Sources */,
 				1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */,
+				1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */,
 				1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */,
 				1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */,
 				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,
