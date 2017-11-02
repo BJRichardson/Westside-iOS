@@ -1,11 +1,11 @@
 import Foundation
 import CoreData
+import Forge
 
 class Store: NSObject {
     
     static let sharedInstance = Store()
     static let resourceEndpoint = "https://westsidecme.herokuapp.com/"
-    
     static let serverOverrideKey = "serverOverrideURL"
     static let tokenKey = "token"
     
@@ -29,4 +29,12 @@ class Store: NSObject {
             return "fellowship1953"
         }
     }
+    
+    var environment: Environment = .staging {
+        didSet {
+            TransportGateway.defaultGateway.baseURL = environment.url
+            UserDefaults.standard.set(environment.url, forKey: Store.serverOverrideKey)
+        }
+    }
+    
 }
