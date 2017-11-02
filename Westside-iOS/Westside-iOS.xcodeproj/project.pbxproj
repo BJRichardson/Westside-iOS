@@ -22,6 +22,9 @@
 		1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4561FAA5F6A00BCEEBD /* Store.swift */; };
 		1F99B4B91FAB764000BCEEBD /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; };
 		1F99B4BA1FAB764000BCEEBD /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FBBA0931FAB81A8009458D4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA0921FAB81A8009458D4 /* Event.swift */; };
+		1FBBA0961FAB83B2009458D4 /* westside.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA0941FAB83B2009458D4 /* westside.xcdatamodeld */; };
+		1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA09A1FAB8762009458D4 /* Group.swift */; };
 		1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */; };
 		1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */; };
 /* End PBXBuildFile section */
@@ -106,6 +109,9 @@
 		1F99B4531FAA5F2200BCEEBD /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		1F99B4561FAA5F6A00BCEEBD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1F99B4AD1FAB738400BCEEBD /* Forge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Forge.xcodeproj; path = stkstdios/Forge.xcodeproj; sourceTree = "<group>"; };
+		1FBBA0921FAB81A8009458D4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1FBBA0951FAB83B2009458D4 /* westside.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = westside.xcdatamodel; sourceTree = "<group>"; };
+		1FBBA09A1FAB8762009458D4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +166,7 @@
 		1F1E01BB1FA2309A00E05229 /* Westside-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1FBBA08F1FAB80A3009458D4 /* Model */,
 				1F99B4551FAA5F5700BCEEBD /* Store */,
 				1F99B44A1FAA0DF500BCEEBD /* Utilities */,
 				1FCB41191FA8B96300B05B67 /* Controller */,
@@ -167,6 +174,7 @@
 				1F1E01C31FA2309A00E05229 /* Assets.xcassets */,
 				1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */,
 				1F1E01C81FA2309A00E05229 /* Info.plist */,
+				1FBBA0941FAB83B2009458D4 /* westside.xcdatamodeld */,
 			);
 			path = "Westside-iOS";
 			sourceTree = "<group>";
@@ -216,6 +224,15 @@
 				1F99B4B81FAB738400BCEEBD /* ForgeHostApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1FBBA08F1FAB80A3009458D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FBBA0921FAB81A8009458D4 /* Event.swift */,
+				1FBBA09A1FAB8762009458D4 /* Group.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
@@ -400,8 +417,11 @@
 				1F99B4521FAA5E5300BCEEBD /* Reachability.swift in Sources */,
 				1F99B4541FAA5F2200BCEEBD /* Toast.swift in Sources */,
 				1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */,
+				1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */,
 				1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */,
+				1FBBA0931FAB81A8009458D4 /* Event.swift in Sources */,
 				1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */,
+				1FBBA0961FAB83B2009458D4 /* westside.xcdatamodeld in Sources */,
 				1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */,
 				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,
 				1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */,
@@ -706,6 +726,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1FBBA0941FAB83B2009458D4 /* westside.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1FBBA0951FAB83B2009458D4 /* westside.xcdatamodel */,
+			);
+			currentVersion = 1FBBA0951FAB83B2009458D4 /* westside.xcdatamodel */;
+			path = westside.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1F1E01B11FA2309A00E05229 /* Project object */;
 }
