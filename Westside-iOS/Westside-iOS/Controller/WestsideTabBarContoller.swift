@@ -7,7 +7,8 @@ class WestsideTabBarController: UITabBarController, UITabBarControllerDelegate {
         super.init(nibName: nil, bundle: nil)
         
         let servicesVC = TestViewController(title: "Services")
-        let eventsVC = TestViewController(title: "Events")
+        let eventsVC = EventsViewController(title: "Events")
+        eventsVC.loadEvents()
         let announcementsVC = TestViewController(title: "Announcements")
         let prayersVC = TestViewController(title: "Prayers")
         

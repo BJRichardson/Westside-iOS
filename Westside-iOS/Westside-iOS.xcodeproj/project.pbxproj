@@ -12,6 +12,13 @@
 		1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */; };
 		1F1E01D21FA2309A00E05229 /* Westside_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01D11FA2309A00E05229 /* Westside_iOSTests.swift */; };
 		1F1E01DD1FA2309A00E05229 /* Westside_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */; };
+		1F343DD71FACDF4D009623CE /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DD61FACDF4D009623CE /* EventsViewController.swift */; };
+		1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F343DD81FACE002009623CE /* EventsViewController.xib */; };
+		1F343DDC1FACE336009623CE /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DDB1FACE336009623CE /* EventCell.swift */; };
+		1F343DDE1FACE351009623CE /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F343DDD1FACE351009623CE /* EventCell.xib */; };
+		1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DE01FACFBB8009623CE /* ActionCell.swift */; };
+		1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DE21FB0F41D009623CE /* StringExtensions.swift */; };
+		1F6354541FB10E3B003388AC /* EventFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354531FB10E3B003388AC /* EventFix.swift */; };
 		1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4441FAA069E00BCEEBD /* WestsideTabBarContoller.swift */; };
 		1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4461FAA092A00BCEEBD /* TestViewController.swift */; };
 		1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */; };
@@ -100,6 +107,13 @@
 		1F1E01D81FA2309A00E05229 /* Westside-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Westside-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westside_iOSUITests.swift; sourceTree = "<group>"; };
 		1F1E01DE1FA2309A00E05229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F343DD61FACDF4D009623CE /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		1F343DD81FACE002009623CE /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		1F343DDB1FACE336009623CE /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		1F343DDD1FACE351009623CE /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		1F343DE01FACFBB8009623CE /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		1F343DE21FB0F41D009623CE /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		1F6354531FB10E3B003388AC /* EventFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFix.swift; sourceTree = "<group>"; };
 		1F99B4441FAA069E00BCEEBD /* WestsideTabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WestsideTabBarContoller.swift; sourceTree = "<group>"; };
 		1F99B4461FAA092A00BCEEBD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -170,6 +184,7 @@
 				1F99B4551FAA5F5700BCEEBD /* Store */,
 				1F99B44A1FAA0DF500BCEEBD /* Utilities */,
 				1FCB41191FA8B96300B05B67 /* Controller */,
+				1F343DDA1FACE2CB009623CE /* View */,
 				1F1E01BC1FA2309A00E05229 /* AppDelegate.swift */,
 				1F1E01C31FA2309A00E05229 /* Assets.xcassets */,
 				1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */,
@@ -197,6 +212,24 @@
 			path = "Westside-iOSUITests";
 			sourceTree = "<group>";
 		};
+		1F343DD31FACDF30009623CE /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				1F343DD61FACDF4D009623CE /* EventsViewController.swift */,
+				1F343DD81FACE002009623CE /* EventsViewController.xib */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		1F343DDA1FACE2CB009623CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F343DDB1FACE336009623CE /* EventCell.swift */,
+				1F343DDD1FACE351009623CE /* EventCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1F99B44A1FAA0DF500BCEEBD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +237,8 @@
 				1F99B44D1FAA14BA00BCEEBD /* UIColor+Westside.swift */,
 				1F99B4511FAA5E5300BCEEBD /* Reachability.swift */,
 				1F99B4531FAA5F2200BCEEBD /* Toast.swift */,
+				1F343DE01FACFBB8009623CE /* ActionCell.swift */,
+				1F343DE21FB0F41D009623CE /* StringExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -231,6 +266,7 @@
 			children = (
 				1FBBA0921FAB81A8009458D4 /* Event.swift */,
 				1FBBA09A1FAB8762009458D4 /* Group.swift */,
+				1F6354531FB10E3B003388AC /* EventFix.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +274,7 @@
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F343DD31FACDF30009623CE /* Events */,
 				1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */,
 				1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */,
 				1F99B4441FAA069E00BCEEBD /* WestsideTabBarContoller.swift */,
@@ -387,8 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */,
+				1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */,
 				1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */,
 				1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */,
+				1F343DDE1FACE351009623CE /* EventCell.xib in Resources */,
 				1F1E01C41FA2309A00E05229 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +459,12 @@
 				1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */,
 				1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */,
 				1FBBA0931FAB81A8009458D4 /* Event.swift in Sources */,
+				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,
+				1F343DDC1FACE336009623CE /* EventCell.swift in Sources */,
+				1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */,
 				1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */,
+				1F343DD71FACDF4D009623CE /* EventsViewController.swift in Sources */,
+				1F6354541FB10E3B003388AC /* EventFix.swift in Sources */,
 				1FBBA0961FAB83B2009458D4 /* westside.xcdatamodeld in Sources */,
 				1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */,
 				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,

@@ -96,17 +96,6 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         contentNavigationController.isNavigationBarHidden = false
-        
-        Store.sharedStore.fetchEvents { [weak self] result in
-            switch result {
-            case .value(let events, _):
-                print("Hi Bryan!\(events)")
-//                self?.events = events
-//                self?.tableView.reloadData()
-            case .error(let error):
-                print("Hi Bryan!\(error.localizedDescription)")
-            }
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

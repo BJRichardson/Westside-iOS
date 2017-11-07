@@ -13,28 +13,21 @@ final class Event : NSManagedObject, ManagedJSONInstantiable {
     @NSManaged var groups: Array<Group>?
     @NSManaged var id: NSNumber!
     
+    var dateFormatter = DateFormatter()
+    
     var needsReload: Bool {
         return title == nil || startTime == nil
     }
     
-    var startString: String {
-        return Event.formatter.string(from: startTime)
+    var monthString: String {
+        dateFormatter.dateFormat = "MMM"
+        return dateFormatter.string(from: startTime)
     }
     
-    var endString: String {
-        guard let endTime = endTime else {
-            return "???"
-        }
-        
-        return Event.formatter.string(from: endTime)
+    var dateString: String {
+        dateFormatter.dateFormat = "dd"
+        return dateFormatter.string(from: startTime)
     }
-    
-    static let formatter = { () -> DateFormatter in
-        var dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .short
-        dateFormatter.dateStyle = .none
-        return dateFormatter
-    }()
     
     func read(from jsonObject: JSONObject) throws {
         id = try jsonObject.decode("id")
@@ -44,6 +37,7 @@ final class Event : NSManagedObject, ManagedJSONInstantiable {
         endTime = try jsonObject.decode("endTime")
         moreInformation = try jsonObject.decode("moreInformation")
         imageUrl = try jsonObject.decode("imageUrl")
+        //groups = try jsonObject.decode("groups")
     }
     
     static func matchKeys() -> (managedKey: String, jsonKey: String)? {
