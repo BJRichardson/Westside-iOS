@@ -38,6 +38,11 @@ class Event: /*NSObject, NSCoding,*/ JSONInstantiable {
         return dateFormatter.string(from: startTime)
     }
     
+    var timeString: String {
+        dateFormatter.dateFormat = "hh:mm a"
+        return dateFormatter.string(from: startTime)
+    }
+    
 //    required init?(coder aDecoder: NSCoder) {
 //        id = aDecoder.decodeObject(forKey: Event.idKey) as? NSNumber
 //        title = aDecoder.decodeObject(forKey: Event.titleKey) as? String

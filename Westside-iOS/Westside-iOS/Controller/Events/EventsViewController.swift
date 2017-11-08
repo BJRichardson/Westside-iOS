@@ -48,6 +48,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.descriptionLabel.text = event.eventDescription
         cell.monthLabel.text = event.monthString
         cell.dateLabel.text = event.dateString
+        cell.timeLabel.text = event.timeString
         cell.groupLabel.text = event.groups?.first?.name
         
         return cell

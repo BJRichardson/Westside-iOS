@@ -20,38 +20,50 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a Sample Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odm-fP-l8O" userLabel="Event Title">
                         <rect key="frame" x="8" y="6" width="359" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <color key="textColor" red="0.16078431369999999" green="0.23921568630000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.1843137255" green="0.67450980390000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUL-Zp-xhM" userLabel="Event Date">
-                        <rect key="frame" x="8" y="46" width="60" height="60"/>
+                        <rect key="frame" x="8" y="46" width="60" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-FW-a29" userLabel="Event Month">
-                                <rect key="frame" x="9" y="0.0" width="42" height="21"/>
+                                <rect key="frame" x="9" y="0.0" width="42" height="19.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="9BD-wB-dvd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDE-gF-gPU" userLabel="Event Day">
-                                <rect key="frame" x="9" y="21.5" width="42" height="38.5"/>
+                                <rect key="frame" x="0.0" y="20" width="60" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 am" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prW-MS-Oiq" userLabel="Event Time">
+                                <rect key="frame" x="0.0" y="59" width="60" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.67450980390000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="nDE-gF-gPU" secondAttribute="bottom" id="Ke4-ej-QaG"/>
-                            <constraint firstAttribute="bottom" secondItem="X9r-FW-a29" secondAttribute="bottom" constant="39" id="SUo-Pc-Yem"/>
-                            <constraint firstAttribute="height" constant="60" id="TsA-DW-sqW"/>
-                            <constraint firstItem="X9r-FW-a29" firstAttribute="leading" secondItem="WUL-Zp-xhM" secondAttribute="leading" constant="9" id="XZy-d6-6NG"/>
+                            <constraint firstItem="nDE-gF-gPU" firstAttribute="top" secondItem="X9r-FW-a29" secondAttribute="bottom" constant="0.5" id="DEl-o2-1XV"/>
+                            <constraint firstAttribute="trailing" secondItem="nDE-gF-gPU" secondAttribute="trailing" id="G8g-gP-hFS"/>
+                            <constraint firstAttribute="trailing" secondItem="prW-MS-Oiq" secondAttribute="trailing" id="PkQ-S8-n0D"/>
+                            <constraint firstItem="prW-MS-Oiq" firstAttribute="leading" secondItem="WUL-Zp-xhM" secondAttribute="leading" id="Rp8-Y2-Gow"/>
+                            <constraint firstItem="X9r-FW-a29" firstAttribute="leading" secondItem="WUL-Zp-xhM" secondAttribute="leading" constant="9" id="TEp-Yz-PHs"/>
+                            <constraint firstAttribute="height" constant="80" id="TsA-DW-sqW"/>
                             <constraint firstAttribute="width" constant="60" id="ddt-Xg-XGc"/>
-                            <constraint firstItem="nDE-gF-gPU" firstAttribute="leading" secondItem="WUL-Zp-xhM" secondAttribute="leading" constant="9" id="sSA-7s-mVi"/>
-                            <constraint firstAttribute="trailing" secondItem="nDE-gF-gPU" secondAttribute="trailing" constant="9" id="vXh-fj-e3B"/>
-                            <constraint firstItem="X9r-FW-a29" firstAttribute="top" secondItem="WUL-Zp-xhM" secondAttribute="top" id="wd1-lc-J4L"/>
+                            <constraint firstItem="nDE-gF-gPU" firstAttribute="top" secondItem="X9r-FW-a29" secondAttribute="bottom" constant="0.5" id="kqi-IV-U0R"/>
+                            <constraint firstItem="nDE-gF-gPU" firstAttribute="leading" secondItem="WUL-Zp-xhM" secondAttribute="leading" id="lVJ-pl-coa"/>
+                            <constraint firstAttribute="bottom" secondItem="prW-MS-Oiq" secondAttribute="bottom" constant="6.5" id="oDr-z4-T0r"/>
+                            <constraint firstItem="prW-MS-Oiq" firstAttribute="top" secondItem="nDE-gF-gPU" secondAttribute="bottom" constant="0.5" id="oXG-Qz-xb3"/>
+                            <constraint firstItem="X9r-FW-a29" firstAttribute="top" secondItem="WUL-Zp-xhM" secondAttribute="top" id="olH-d8-o2l"/>
+                            <constraint firstItem="prW-MS-Oiq" firstAttribute="top" secondItem="nDE-gF-gPU" secondAttribute="bottom" constant="0.5" id="q5P-Jw-AnN"/>
+                            <constraint firstAttribute="trailing" secondItem="X9r-FW-a29" secondAttribute="trailing" constant="9" id="rJT-Tr-mck"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvU-mq-Zsa" userLabel="Seperator">
@@ -61,7 +73,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Usher Board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcA-Vs-Mlg">
                         <rect key="frame" x="8" y="27" width="351" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.16078431369999999" green="0.23921568630000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.1843137255" green="0.67450980390000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOY-wD-p0y" userLabel="Event Description">
@@ -71,6 +83,7 @@
                             <constraint firstAttribute="height" constant="96" id="mvf-Zv-1bf"/>
                         </constraints>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" red="0.1843137255" green="0.67450980390000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
@@ -95,11 +108,13 @@
                     <constraint firstAttribute="trailing" secondItem="xOY-wD-p0y" secondAttribute="trailing" constant="8" id="zth-4p-oMc"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.16078431369999999" green="0.23921568630000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="dateLabel" destination="nDE-gF-gPU" id="4kq-jS-X3k"/>
                 <outlet property="descriptionLabel" destination="xOY-wD-p0y" id="urE-eX-eU9"/>
                 <outlet property="groupLabel" destination="BcA-Vs-Mlg" id="8GQ-AO-uLh"/>
                 <outlet property="monthLabel" destination="X9r-FW-a29" id="9tA-8i-ivN"/>
+                <outlet property="timeLabel" destination="prW-MS-Oiq" id="P2R-QP-t9u"/>
                 <outlet property="titleLabel" destination="Odm-fP-l8O" id="0iU-ds-Ikv"/>
             </connections>
             <point key="canvasLocation" x="-276.5" y="-148"/>
