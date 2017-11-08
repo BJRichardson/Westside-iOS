@@ -3,14 +3,14 @@ import Forge
 
 class EventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     private var events = Array<Event>()
     
     init(title: String) {
         super.init(nibName: nil, bundle: nil)
         self.title = NSLocalizedString(title, comment: "")
-//        self.navigationItem.titleView = UIImageView(image: UIImage(named: "logo_fox_header"))
-//        self.tabBarItem.image = UIImage(named: "ico_upcoming_off")
+        self.tabBarItem.image = UIImage(named: "icon_calendar")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,6 +23,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.alwaysBounceVertical = false
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(class: EventCell.self)
+        tableView.isHidden = true
     }
     
     // MARK: - Actions
@@ -47,7 +48,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.descriptionLabel.text = event.eventDescription
         cell.monthLabel.text = event.monthString
         cell.dateLabel.text = event.dateString
-        cell.groupLabel.text = "Ministry Group Example"
+        cell.groupLabel.text = event.groups?.first?.name
         
         return cell
     }
@@ -60,5 +61,11 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         return events.count
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath.row == events.count - 1) {
+            loadingIndicator?.stopAnimating()
+            tableView.isHidden = false
+        }
+    }
 }
 

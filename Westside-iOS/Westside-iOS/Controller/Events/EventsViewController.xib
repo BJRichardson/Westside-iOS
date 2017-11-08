@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsViewController" customModule="Westside_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="loadingIndicator" destination="RJu-Gh-Tpn" id="TAh-9x-eZX"/>
                 <outlet property="tableView" destination="upF-I5-JIP" id="bBd-1Q-Evw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Zdc-HX-N9P"/>
             </connections>
@@ -29,13 +30,20 @@
                         <outlet property="delegate" destination="-1" id="6t6-Y2-GjA"/>
                     </connections>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RJu-Gh-Tpn">
+                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="upF-I5-JIP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3xI-c6-a6A"/>
                 <constraint firstItem="upF-I5-JIP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="5mE-Vl-yq8"/>
                 <constraint firstItem="upF-I5-JIP" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Mta-Se-XeZ"/>
+                <constraint firstItem="RJu-Gh-Tpn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="303" id="OWi-M0-sTo"/>
                 <constraint firstItem="upF-I5-JIP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cW9-lN-gQu"/>
+                <constraint firstItem="RJu-Gh-Tpn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="177" id="g1k-cx-NEr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RJu-Gh-Tpn" secondAttribute="bottom" constant="324" id="pBa-Jw-C1K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RJu-Gh-Tpn" secondAttribute="trailing" constant="178" id="r9l-a8-I3F"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="76.5"/>

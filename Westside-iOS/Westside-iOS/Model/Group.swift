@@ -1,24 +1,24 @@
 import Foundation
-import CoreData
-import Forge
 
-@objc(Group)
-final class Group : NSManagedObject, ManagedJSONInstantiable {
-    @NSManaged var name: String!
-    @NSManaged var groupDescription: String?
-    @NSManaged var chairPerson: String?
-    @NSManaged var email: String?
-    @NSManaged var phone: String?
-    @NSManaged var imageUrl: String?
-    @NSManaged var id: NSNumber!
+final class Group : JSONInstantiable {
+    var name: String!
+    var groupDescription: String?
+    var chairPerson: String?
+    var email: String?
+    var phone: String?
+    var imageUrl: String?
+    var id: NSNumber!
+    
+    //MARK: - JSONInstantiable
+    required init() {}
     
     var needsReload: Bool {
         return name == nil
     }
     
-    func read(from jsonObject: JSONObject) throws {
+    func read(from jsonObject: MiniJSONObject) throws {
         id = try jsonObject.decode("id")
-        name = try jsonObject.decode("title")
+        name = try jsonObject.decode("name")
         groupDescription = try jsonObject.decode("description")
         chairPerson = try jsonObject.decode("chairperson")
         email = try jsonObject.decode("email")

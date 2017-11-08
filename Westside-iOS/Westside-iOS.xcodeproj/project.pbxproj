@@ -18,7 +18,16 @@
 		1F343DDE1FACE351009623CE /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F343DDD1FACE351009623CE /* EventCell.xib */; };
 		1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DE01FACFBB8009623CE /* ActionCell.swift */; };
 		1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DE21FB0F41D009623CE /* StringExtensions.swift */; };
-		1F6354541FB10E3B003388AC /* EventFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354531FB10E3B003388AC /* EventFix.swift */; };
+		1F6354541FB10E3B003388AC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354531FB10E3B003388AC /* Event.swift */; };
+		1F6354641FB24D64003388AC /* MiniJSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354631FB24D64003388AC /* MiniJSONObject.swift */; };
+		1F6354681FB25897003388AC /* MiniJSONRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354671FB25897003388AC /* MiniJSONRepresentable.swift */; };
+		1F6354761FB26131003388AC /* Transportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354711FB26130003388AC /* Transportable.swift */; };
+		1F6354771FB26131003388AC /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354721FB26130003388AC /* HTTPRequest.swift */; };
+		1F6354781FB26131003388AC /* URLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354731FB26130003388AC /* URLValue.swift */; };
+		1F6354791FB26131003388AC /* TransportGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354741FB26131003388AC /* TransportGateway.swift */; };
+		1F63547A1FB26131003388AC /* TimestampFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6354751FB26131003388AC /* TimestampFormatter.swift */; };
+		1F63547C1FB26194003388AC /* AuthenticationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63547B1FB26194003388AC /* AuthenticationToken.swift */; };
+		1F63547E1FB2625D003388AC /* ModelGraphTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63547D1FB2625D003388AC /* ModelGraphTransformer.swift */; };
 		1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4441FAA069E00BCEEBD /* WestsideTabBarContoller.swift */; };
 		1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4461FAA092A00BCEEBD /* TestViewController.swift */; };
 		1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */; };
@@ -29,8 +38,6 @@
 		1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4561FAA5F6A00BCEEBD /* Store.swift */; };
 		1F99B4B91FAB764000BCEEBD /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; };
 		1F99B4BA1FAB764000BCEEBD /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1FBBA0931FAB81A8009458D4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA0921FAB81A8009458D4 /* Event.swift */; };
-		1FBBA0961FAB83B2009458D4 /* westside.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA0941FAB83B2009458D4 /* westside.xcdatamodeld */; };
 		1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA09A1FAB8762009458D4 /* Group.swift */; };
 		1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */; };
 		1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */; };
@@ -113,7 +120,16 @@
 		1F343DDD1FACE351009623CE /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		1F343DE01FACFBB8009623CE /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 		1F343DE21FB0F41D009623CE /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		1F6354531FB10E3B003388AC /* EventFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFix.swift; sourceTree = "<group>"; };
+		1F6354531FB10E3B003388AC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1F6354631FB24D64003388AC /* MiniJSONObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniJSONObject.swift; sourceTree = "<group>"; };
+		1F6354671FB25897003388AC /* MiniJSONRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniJSONRepresentable.swift; sourceTree = "<group>"; };
+		1F6354711FB26130003388AC /* Transportable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transportable.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/Transportable.swift"; sourceTree = "<group>"; };
+		1F6354721FB26130003388AC /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/HTTPRequest.swift"; sourceTree = "<group>"; };
+		1F6354731FB26130003388AC /* URLValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLValue.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/URLValue.swift"; sourceTree = "<group>"; };
+		1F6354741FB26131003388AC /* TransportGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransportGateway.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/TransportGateway.swift"; sourceTree = "<group>"; };
+		1F6354751FB26131003388AC /* TimestampFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimestampFormatter.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/TimestampFormatter.swift"; sourceTree = "<group>"; };
+		1F63547B1FB26194003388AC /* AuthenticationToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationToken.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/AuthenticationToken.swift"; sourceTree = "<group>"; };
+		1F63547D1FB2625D003388AC /* ModelGraphTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelGraphTransformer.swift; path = "../../../../brightwell-consumer-ios/Forge/Forge/ModelGraphTransformer.swift"; sourceTree = "<group>"; };
 		1F99B4441FAA069E00BCEEBD /* WestsideTabBarContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WestsideTabBarContoller.swift; sourceTree = "<group>"; };
 		1F99B4461FAA092A00BCEEBD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -123,8 +139,6 @@
 		1F99B4531FAA5F2200BCEEBD /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		1F99B4561FAA5F6A00BCEEBD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1F99B4AD1FAB738400BCEEBD /* Forge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Forge.xcodeproj; path = stkstdios/Forge.xcodeproj; sourceTree = "<group>"; };
-		1FBBA0921FAB81A8009458D4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		1FBBA0951FAB83B2009458D4 /* westside.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = westside.xcdatamodel; sourceTree = "<group>"; };
 		1FBBA09A1FAB8762009458D4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
@@ -180,6 +194,7 @@
 		1F1E01BB1FA2309A00E05229 /* Westside-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1F63546E1FB260C3003388AC /* WebUtils */,
 				1FBBA08F1FAB80A3009458D4 /* Model */,
 				1F99B4551FAA5F5700BCEEBD /* Store */,
 				1F99B44A1FAA0DF500BCEEBD /* Utilities */,
@@ -189,7 +204,6 @@
 				1F1E01C31FA2309A00E05229 /* Assets.xcassets */,
 				1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */,
 				1F1E01C81FA2309A00E05229 /* Info.plist */,
-				1FBBA0941FAB83B2009458D4 /* westside.xcdatamodeld */,
 			);
 			path = "Westside-iOS";
 			sourceTree = "<group>";
@@ -230,6 +244,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1F63546E1FB260C3003388AC /* WebUtils */ = {
+			isa = PBXGroup;
+			children = (
+				1F63547D1FB2625D003388AC /* ModelGraphTransformer.swift */,
+				1F63547B1FB26194003388AC /* AuthenticationToken.swift */,
+				1F6354721FB26130003388AC /* HTTPRequest.swift */,
+				1F6354751FB26131003388AC /* TimestampFormatter.swift */,
+				1F6354711FB26130003388AC /* Transportable.swift */,
+				1F6354741FB26131003388AC /* TransportGateway.swift */,
+				1F6354731FB26130003388AC /* URLValue.swift */,
+				1F6354631FB24D64003388AC /* MiniJSONObject.swift */,
+				1F6354671FB25897003388AC /* MiniJSONRepresentable.swift */,
+			);
+			path = WebUtils;
+			sourceTree = "<group>";
+		};
 		1F99B44A1FAA0DF500BCEEBD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,9 +294,8 @@
 		1FBBA08F1FAB80A3009458D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1FBBA0921FAB81A8009458D4 /* Event.swift */,
 				1FBBA09A1FAB8762009458D4 /* Group.swift */,
-				1F6354531FB10E3B003388AC /* EventFix.swift */,
+				1F6354531FB10E3B003388AC /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -456,20 +485,27 @@
 				1F99B4521FAA5E5300BCEEBD /* Reachability.swift in Sources */,
 				1F99B4541FAA5F2200BCEEBD /* Toast.swift in Sources */,
 				1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */,
+				1F63547A1FB26131003388AC /* TimestampFormatter.swift in Sources */,
+				1F6354781FB26131003388AC /* URLValue.swift in Sources */,
 				1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */,
 				1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */,
-				1FBBA0931FAB81A8009458D4 /* Event.swift in Sources */,
 				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,
 				1F343DDC1FACE336009623CE /* EventCell.swift in Sources */,
 				1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */,
 				1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */,
+				1F6354791FB26131003388AC /* TransportGateway.swift in Sources */,
 				1F343DD71FACDF4D009623CE /* EventsViewController.swift in Sources */,
-				1F6354541FB10E3B003388AC /* EventFix.swift in Sources */,
-				1FBBA0961FAB83B2009458D4 /* westside.xcdatamodeld in Sources */,
+				1F6354761FB26131003388AC /* Transportable.swift in Sources */,
+				1F6354641FB24D64003388AC /* MiniJSONObject.swift in Sources */,
+				1F63547E1FB2625D003388AC /* ModelGraphTransformer.swift in Sources */,
+				1F6354541FB10E3B003388AC /* Event.swift in Sources */,
 				1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */,
 				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,
 				1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */,
+				1F6354771FB26131003388AC /* HTTPRequest.swift in Sources */,
 				1F1E01BD1FA2309A00E05229 /* AppDelegate.swift in Sources */,
+				1F6354681FB25897003388AC /* MiniJSONRepresentable.swift in Sources */,
+				1F63547C1FB26194003388AC /* AuthenticationToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,19 +806,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1FBBA0941FAB83B2009458D4 /* westside.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1FBBA0951FAB83B2009458D4 /* westside.xcdatamodel */,
-			);
-			currentVersion = 1FBBA0951FAB83B2009458D4 /* westside.xcdatamodel */;
-			path = westside.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1F1E01B11FA2309A00E05229 /* Project object */;
 }
