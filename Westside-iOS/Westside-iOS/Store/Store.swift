@@ -82,6 +82,19 @@ class Store {
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
     }
     
+    func fetchAnnouncements(completion: @escaping (URLResult<Array<Announcement>>) -> Void) {
+        let request: ResourceListRequest<Announcement> = TransportGateway.defaultGateway.makeRequest(identifiers: ["announcements"])
+        request.basicAuthorizationUsername = environment.clientId
+        request.basicAuthorizationPassword = environment.clientSecret
+        request.completion = { result in
+            if case .value = result {
+                //self.saveContext()
+            }
+            completion(result)
+        }
+        TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
 //    func saveContext() {
 //        do {
 //            try managedObjectContext.save()

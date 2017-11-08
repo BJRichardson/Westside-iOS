@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnouncementsViewController" customModule="Westside_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndicator" destination="FRZ-K3-5bE" id="CTd-9e-ncP"/>
+                <outlet property="tableView" destination="vwg-6f-1FF" id="79a-Qh-TWF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="VEk-PP-W1p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vwg-6f-1FF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.1843137255" green="0.67450980390000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="agc-Lb-4s2"/>
+                        <outlet property="delegate" destination="-1" id="FEm-GO-AMY"/>
+                    </connections>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="FRZ-K3-5bE">
+                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FRZ-K3-5bE" secondAttribute="trailing" constant="178" id="2uf-zl-ts8"/>
+                <constraint firstItem="FRZ-K3-5bE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="177" id="BHM-ci-wUl"/>
+                <constraint firstItem="vwg-6f-1FF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="BT7-Ka-Z1O"/>
+                <constraint firstItem="vwg-6f-1FF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KG9-ia-deC"/>
+                <constraint firstItem="vwg-6f-1FF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="R3w-Uw-hGA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FRZ-K3-5bE" secondAttribute="bottom" constant="324" id="WKa-zV-DaA"/>
+                <constraint firstItem="FRZ-K3-5bE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="303" id="tA8-6H-MdF"/>
+                <constraint firstItem="vwg-6f-1FF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="w3N-Ml-caM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="76.5"/>
+        </view>
+    </objects>
+</document>

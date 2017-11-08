@@ -12,6 +12,12 @@
 		1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */; };
 		1F1E01D21FA2309A00E05229 /* Westside_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01D11FA2309A00E05229 /* Westside_iOSTests.swift */; };
 		1F1E01DD1FA2309A00E05229 /* Westside_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */; };
+		1F2E11951FB37C7F00E92FE9 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */; };
+		1F2E11971FB37CD000E92FE9 /* AnnouncementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */; };
+		1F2E11991FB3895800E92FE9 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E11981FB3895800E92FE9 /* Announcement.swift */; };
+		1F2E119B1FB38DEB00E92FE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E119A1FB38DEB00E92FE9 /* User.swift */; };
+		1F2E119E1FB390D700E92FE9 /* AnnouncementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E119D1FB390D700E92FE9 /* AnnouncementCell.swift */; };
+		1F2E11A21FB3925400E92FE9 /* AnnouncementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E11A11FB3925400E92FE9 /* AnnouncementCell.xib */; };
 		1F343DD71FACDF4D009623CE /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DD61FACDF4D009623CE /* EventsViewController.swift */; };
 		1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F343DD81FACE002009623CE /* EventsViewController.xib */; };
 		1F343DDC1FACE336009623CE /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F343DDB1FACE336009623CE /* EventCell.swift */; };
@@ -114,6 +120,12 @@
 		1F1E01D81FA2309A00E05229 /* Westside-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Westside-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westside_iOSUITests.swift; sourceTree = "<group>"; };
 		1F1E01DE1FA2309A00E05229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
+		1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnouncementsViewController.xib; sourceTree = "<group>"; };
+		1F2E11981FB3895800E92FE9 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		1F2E119A1FB38DEB00E92FE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1F2E119D1FB390D700E92FE9 /* AnnouncementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCell.swift; sourceTree = "<group>"; };
+		1F2E11A11FB3925400E92FE9 /* AnnouncementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnouncementCell.xib; sourceTree = "<group>"; };
 		1F343DD61FACDF4D009623CE /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		1F343DD81FACE002009623CE /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		1F343DDB1FACE336009623CE /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -226,6 +238,15 @@
 			path = "Westside-iOSUITests";
 			sourceTree = "<group>";
 		};
+		1F2E11911FB37C1F00E92FE9 /* Announcements */ = {
+			isa = PBXGroup;
+			children = (
+				1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */,
+				1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */,
+			);
+			path = Announcements;
+			sourceTree = "<group>";
+		};
 		1F343DD31FACDF30009623CE /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +261,8 @@
 			children = (
 				1F343DDB1FACE336009623CE /* EventCell.swift */,
 				1F343DDD1FACE351009623CE /* EventCell.xib */,
+				1F2E119D1FB390D700E92FE9 /* AnnouncementCell.swift */,
+				1F2E11A11FB3925400E92FE9 /* AnnouncementCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +319,8 @@
 			children = (
 				1FBBA09A1FAB8762009458D4 /* Group.swift */,
 				1F6354531FB10E3B003388AC /* Event.swift */,
+				1F2E11981FB3895800E92FE9 /* Announcement.swift */,
+				1F2E119A1FB38DEB00E92FE9 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +328,7 @@
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F2E11911FB37C1F00E92FE9 /* Announcements */,
 				1F343DD31FACDF30009623CE /* Events */,
 				1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */,
 				1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */,
@@ -452,6 +478,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2E11A21FB3925400E92FE9 /* AnnouncementCell.xib in Resources */,
+				1F2E11971FB37CD000E92FE9 /* AnnouncementsViewController.xib in Resources */,
 				1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */,
 				1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */,
 				1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */,
@@ -484,9 +512,13 @@
 			files = (
 				1F99B4521FAA5E5300BCEEBD /* Reachability.swift in Sources */,
 				1F99B4541FAA5F2200BCEEBD /* Toast.swift in Sources */,
+				1F2E11991FB3895800E92FE9 /* Announcement.swift in Sources */,
+				1F2E11951FB37C7F00E92FE9 /* AnnouncementsViewController.swift in Sources */,
 				1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */,
+				1F2E119B1FB38DEB00E92FE9 /* User.swift in Sources */,
 				1F63547A1FB26131003388AC /* TimestampFormatter.swift in Sources */,
 				1F6354781FB26131003388AC /* URLValue.swift in Sources */,
+				1F2E119E1FB390D700E92FE9 /* AnnouncementCell.swift in Sources */,
 				1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */,
 				1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */,
 				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,

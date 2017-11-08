@@ -116,6 +116,10 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         return .portrait
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - IBActions
     
     @IBAction func closeMenu(_ sender: AnyObject) {

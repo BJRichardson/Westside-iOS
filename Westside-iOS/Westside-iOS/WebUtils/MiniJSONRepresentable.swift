@@ -1,11 +1,3 @@
-//
-//  ManagedJSONRepresentable.swift
-//  Forge
-//
-//  Created by Joe Conway on 10/6/15.
-//
-//
-
 import Foundation
 import CoreData
 

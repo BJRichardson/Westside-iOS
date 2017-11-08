@@ -9,7 +9,8 @@ class WestsideTabBarController: UITabBarController, UITabBarControllerDelegate {
         let servicesVC = TestViewController(title: "Services")
         let eventsVC = EventsViewController(title: "Events")
         eventsVC.loadEvents()
-        let announcementsVC = TestViewController(title: "Announcements")
+        let announcementsVC = AnnouncementsViewController(title: "Announcements")
+        announcementsVC.loadAnnouncements()
         let prayersVC = TestViewController(title: "Prayers")
         
         viewControllers = [servicesVC, eventsVC, announcementsVC, prayersVC]

@@ -75,5 +75,4 @@ class Event: /*NSObject, NSCoding,*/ JSONInstantiable {
         imageUrl = try jsonObject.decode("imageUrl")
         groups = try jsonObject.decode("groups") 
     }
-
 }
