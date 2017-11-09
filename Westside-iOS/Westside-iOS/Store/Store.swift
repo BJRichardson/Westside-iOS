@@ -95,6 +95,19 @@ class Store {
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
     }
     
+    func fetchPrayers(completion: @escaping (URLResult<Array<Prayer>>) -> Void) {
+        let request: ResourceListRequest<Prayer> = TransportGateway.defaultGateway.makeRequest(identifiers: ["prayers"])
+        request.basicAuthorizationUsername = environment.clientId
+        request.basicAuthorizationPassword = environment.clientSecret
+        request.completion = { result in
+            if case .value = result {
+                //self.saveContext()
+            }
+            completion(result)
+        }
+        TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
 //    func saveContext() {
 //        do {
 //            try managedObjectContext.save()
