@@ -9,6 +9,12 @@ class Store {
     static let serverOverrideKey = "serverOverrideURL"
     static let tokenKey = "token"
     
+    var user: User?
+    
+    var isUserLoggedIn: Bool {
+        return user != nil
+    }
+    
     //var managedObjectContext: NSManagedObjectContext
     
     enum Environment: String {
@@ -65,7 +71,7 @@ class Store {
 //            try! psc.destroyPersistentStore(at: storeURL, ofType: NSSQLiteStoreType, options: nil)
 //            fatalError("Error migrating store: \(error)")
 //        }
-        
+//
         TransportGateway.defaultGateway.baseURL = UserDefaults.standard.url(forKey: Store.serverOverrideKey) ?? environment.url
     }
     
@@ -106,6 +112,55 @@ class Store {
             completion(result)
         }
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
+    func loginWith(username: String, password: String, completion: ((Error?) -> Void)?) {
+        let request: ResourceRequest<OAuthToken> = TransportGateway.defaultGateway.makeRequest(identifiers: ["auth", "token"])
+        request.completion = tokenCompletion(completion: completion)
+        request.method = .post
+        request.basicAuthorizationUsername = environment.clientId
+        request.basicAuthorizationPassword = environment.clientSecret
+        var components = URLComponents()
+        components.queryItems = [
+            URLQueryItem(name: "username", value: username),
+            URLQueryItem(name: "password", value: password),
+            URLQueryItem(name: "grant_type",value: "password")
+        ]
+        request.httpBody = components.query?.data(using: .utf8)
+        TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
+    func tokenCompletion(completion: ((Error?) -> Void)?) -> (URLResult<OAuthToken>) -> Void {
+        return { tokenResult in
+            switch tokenResult {
+            case .value(let token, _):
+                TransportGateway.defaultGateway.token = token
+                UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: token), forKey: Store.tokenKey)
+                self.getIdentity { userResult in
+                    switch userResult {
+                    case .value:
+                        completion?(nil)
+                    case .error(let error):
+                        completion?(error)
+                    }
+                }
+            case .error(let error):
+                completion?(error)
+            }
+        }
+    }
+    
+    func getIdentity(completion: ((URLResult<User>) -> Void)? = nil) {
+        let request: ResourceRequest<User> = TransportGateway.defaultGateway.makeRequest(identifiers: ["me"])
+        request.completion = { result in
+            if case let .value(u,_) = result {
+                self.user = u
+                //self.saveContext()
+            }
+            completion?(result)
+        }
+        //request.transformer.context = managedObjectContext
+        TransportGateway.defaultGateway.enqueueForAuthentication(request)
     }
     
 //    func saveContext() {

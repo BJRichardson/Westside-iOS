@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Westside_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="menusTableView" destination="3hW-hg-4N3" id="Jou-Cm-fxS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="TZk-3b-Pgu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3hW-hg-4N3">
+                    <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qNf-7y-iWv"/>
+                        <outlet property="delegate" destination="-1" id="flB-Mo-RC3"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPW-ZA-Q3c">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                    <color key="backgroundColor" red="0.16078431369999999" green="0.23921568630000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="136" id="zsR-FZ-w7c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kPW-ZA-Q3c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8mV-0q-tDe"/>
+                <constraint firstItem="3hW-hg-4N3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="CmD-wz-2pU"/>
+                <constraint firstItem="kPW-ZA-Q3c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dde-qP-Wgd"/>
+                <constraint firstItem="3hW-hg-4N3" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OZ3-JC-J1r"/>
+                <constraint firstItem="kPW-ZA-Q3c" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="YWi-0S-1xJ"/>
+                <constraint firstItem="3hW-hg-4N3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="b9Z-X3-SlY"/>
+                <constraint firstItem="3hW-hg-4N3" firstAttribute="top" secondItem="kPW-ZA-Q3c" secondAttribute="bottom" id="epJ-h0-u7R"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="76.5"/>
+        </view>
+    </objects>
+</document>

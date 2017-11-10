@@ -23,6 +23,8 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     
     var westsideTabBarController: WestsideTabBarController
     var contentNavigationController: UINavigationController
+    var menuNavigationController: UINavigationController
+    var loginViewController: LoginViewController?
     
     let reachability: Reachability
     
@@ -53,6 +55,7 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     // MARK: - Init methods
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        menuNavigationController = UINavigationController(rootViewController: MenuViewController(title:"MVC"))
         
         westsideTabBarController = WestsideTabBarController()
         contentNavigationController = UINavigationController(rootViewController: westsideTabBarController)
@@ -61,11 +64,11 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+        menuNavigationController.delegate = self
         contentNavigationController.delegate = self
         
         sidePanelGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(recognizer:)))
         sidePanelGestureRecognizer.delegate = self
-        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -75,7 +78,7 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//      setUpChildViewController(viewController: menuNavigationController, containerView: menuContainerView)
+        setUpChildViewController(viewController: menuNavigationController, containerView: menuContainerView)
         setUpChildViewController(viewController: contentNavigationController, containerView: contentContainerView)
         
         view.addGestureRecognizer(sidePanelGestureRecognizer)
@@ -144,19 +147,23 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     
     private func setupContentNavBar(for viewController: UIViewController) {
         structureView()
+        
+        viewController.title = "Westside CME"
         viewController.navigationItem.leftBarButtonItem = menuBarButton
+        menuBarButton.tintColor = UIColor.white
     }
     
     // MARK: - UINavigationControllerDelegate
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController,
                               animated: Bool) {
+        if navigationController == contentNavigationController {
+            setupContentNavBar(for: viewController)
+        }
+        
         navigationController.isNavigationBarHidden = false
         navigationController.navigationBar.barTintColor = UIColor.primaryColor()
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        viewController.title = "Westside CME"
-        viewController.navigationItem.leftBarButtonItem = menuBarButton
-        menuBarButton.tintColor = UIColor.white
     }
     
     // MARK: - Pan gesture
@@ -209,5 +216,75 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return false
+    }
+    
+    // MARK: - MenuViewControllerDelegate
+    
+    func displayContent(content: ContentDisplayable, title: String, destination: UIViewController?) {
+        menuState = .closed
+        switch content {
+        case .view:
+            transitionToViewController(viewController: destination!)
+        case .action(let action):
+            handleAction(action: action)
+            return
+        }
+    }
+    
+    private func handleAction(action: ContentActionable) {
+        switch action {
+        case .login:
+            showLoginViewController()
+        case .logout:
+            //Store.sharedInstance.logout()
+            menuNavigationController.setViewControllers([MenuViewController(title: "MVC")], animated: false)
+            //alertBannerViewController.loginStatusChanged()
+            //transitionToViewController(viewController: HomeViewController(showSplash: true))
+        }
+    }
+    
+    func transitionToViewController(viewController: UIViewController) {
+        contentNavigationController.setViewControllers([viewController], animated: false)
+        setupContentNavBar(for: viewController)
+    }
+    
+    func showLoginViewController() {
+        loginViewController = LoginViewController()
+        loginViewController!.delegate = self
+        
+        let loginNavController = UINavigationController(rootViewController: loginViewController!)
+        loginNavController.navigationBar.barTintColor = UIColor.primaryColor()
+        loginNavController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        present(loginNavController, animated: true, completion: nil)
+    }
+    
+    func removeLoginViewController() {
+        dismiss(animated: true) {
+            self.loginViewController = nil
+        }
+    }
+}
+
+extension UIViewController {
+    var containerViewController: ContainerViewController? {
+        var vc = Optional(self)
+        while vc != nil {
+            if let cvc = vc as? ContainerViewController {
+                return cvc
+            }
+            vc = vc?.parent
+        }
+        return nil
+    }
+}
+
+extension ContainerViewController: LoginViewControllerDelegate {
+    func loginDidSucceed() {
+        menuNavigationController.setViewControllers([MenuViewController(title: "MVC")], animated: false)
+        removeLoginViewController()
+    }
+    
+    func loginDidCancel() {
+        removeLoginViewController()
     }
 }
