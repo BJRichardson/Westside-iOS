@@ -6,14 +6,13 @@ protocol LoginViewControllerDelegate: class {
     func loginDidCancel()
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private static let viewName = "NativeLogin"
@@ -45,7 +44,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         loginButton.layer.cornerRadius = 8
-        signUpButton.layer.cornerRadius = 8
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -114,10 +112,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPasswordPressed(_ sender: Any) {
         //UIApplication.shared.openURL(forgotPasswordURL)
-    }
-    
-    @IBAction func signUpPressed(_ sender: Any) {
-        //UIApplication.shared.openURL(signUpURL)
     }
     
     private func show(error: TransportError) {

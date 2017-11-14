@@ -11,6 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .black
         window?.rootViewController = ContainerViewController()
         window?.makeKeyAndVisible()
+        
+        UIApplication.shared.statusBarStyle = .lightContent
 
         return true
     }

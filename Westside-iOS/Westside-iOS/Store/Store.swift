@@ -15,6 +15,19 @@ class Store {
         return user != nil
     }
     
+    var unauthedMenus: Array<Menu> {
+        var menuItems: Array<Menu> = []
+        menuItems.append(Menu(title: "Login", destination: nil, content: .action(.login)))
+        menuItems.append(Menu(title: "Create Account", destination: nil, content: .action(.register)))
+        return menuItems
+    }
+    
+    var authedMenus: Array<Menu> {
+        var menuItems: Array<Menu> = []
+        menuItems.append(Menu(title: "Logout", destination: nil, content: .action(.logout)))
+        return menuItems
+    }
+    
     //var managedObjectContext: NSManagedObjectContext
     
     enum Environment: String {
@@ -127,6 +140,29 @@ class Store {
             URLQueryItem(name: "grant_type",value: "password")
         ]
         request.httpBody = components.query?.data(using: .utf8)
+        TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
+    func logout() {
+        user = nil
+        UserDefaults.standard.removeObject(forKey: Store.tokenKey)
+        TransportGateway.defaultGateway.token = nil
+        UserDefaults.standard.removeObject(forKey: Store.tokenKey)
+    }
+    
+    func registerWith(username: String, password: String, phone: String, firstName: String, lastName: String, completion: ((Error?) -> Void)?) {
+        let request: ResourceRequest<OAuthToken> = TransportGateway.defaultGateway.makeRequest(identifiers: ["register"])
+        request.completion = tokenCompletion(completion: completion)
+        request.method = .post
+        request.basicAuthorizationUsername = environment.clientId
+        request.basicAuthorizationPassword = environment.clientSecret
+        request.bodyValues = [
+            "username" : username,
+            "password" : password,
+            "phone" : phone,
+            "firstName" : firstName,
+            "lastName" : lastName,
+        ]
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
     }
     

@@ -49,6 +49,10 @@
 		1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4561FAA5F6A00BCEEBD /* Store.swift */; };
 		1F99B4B91FAB764000BCEEBD /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; };
 		1F99B4BA1FAB764000BCEEBD /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FB906551FBB520E00491CE4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB906541FBB520E00491CE4 /* RegisterViewController.swift */; };
+		1FB906571FBB52AD00491CE4 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB906561FBB52AD00491CE4 /* RegisterViewController.xib */; };
+		1FB9065B1FBB58D200491CE4 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */; };
+		1FB906601FBB9B1A00491CE4 /* UIViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9065F1FBB9B1A00491CE4 /* UIViewController+ErrorAlert.swift */; };
 		1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBA09A1FAB8762009458D4 /* Group.swift */; };
 		1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */; };
 		1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */; };
@@ -169,6 +173,10 @@
 		1F99B4531FAA5F2200BCEEBD /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		1F99B4561FAA5F6A00BCEEBD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1F99B4AD1FAB738400BCEEBD /* Forge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Forge.xcodeproj; path = stkstdios/Forge.xcodeproj; sourceTree = "<group>"; };
+		1FB906541FBB520E00491CE4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1FB906561FBB52AD00491CE4 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
+		1FB9065F1FBB9B1A00491CE4 /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
 		1FBBA09A1FAB8762009458D4 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		1FCB41151FA8B82C00B05B67 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		1FCB41171FA8B85200B05B67 /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
@@ -302,6 +310,7 @@
 				1F2E11AC1FB4A5A000E92FE9 /* PrayerCell.xib */,
 				1FE5256C1FB62B5E00DC1F80 /* MenuCell.swift */,
 				1FE5256E1FB62BDB00DC1F80 /* MenuCell.xib */,
+				1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				1F99B4531FAA5F2200BCEEBD /* Toast.swift */,
 				1F343DE01FACFBB8009623CE /* ActionCell.swift */,
 				1F343DE21FB0F41D009623CE /* StringExtensions.swift */,
+				1FB9065F1FBB9B1A00491CE4 /* UIViewController+ErrorAlert.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -353,6 +363,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1FB906511FBB51E700491CE4 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1FB906541FBB520E00491CE4 /* RegisterViewController.swift */,
+				1FB906561FBB52AD00491CE4 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		1FBBA08F1FAB80A3009458D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +389,7 @@
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FB906511FBB51E700491CE4 /* Register */,
 				1FE525721FB63C6600DC1F80 /* Login */,
 				1F2E11A31FB4A23800E92FE9 /* Prayers */,
 				1F2E11911FB37C1F00E92FE9 /* Announcements */,
@@ -542,6 +562,7 @@
 				1FE5256F1FB62BDB00DC1F80 /* MenuCell.xib in Resources */,
 				1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */,
 				1FE525691FB6235100DC1F80 /* MenuViewController.xib in Resources */,
+				1FB906571FBB52AD00491CE4 /* RegisterViewController.xib in Resources */,
 				1FE525771FB63EFD00DC1F80 /* LoginViewController.xib in Resources */,
 				1F343DDE1FACE351009623CE /* EventCell.xib in Resources */,
 				1F1E01C41FA2309A00E05229 /* Assets.xcassets in Resources */,
@@ -585,7 +606,9 @@
 				1F2E119E1FB390D700E92FE9 /* AnnouncementCell.swift in Sources */,
 				1FBBA09B1FAB8762009458D4 /* Group.swift in Sources */,
 				1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */,
+				1FB906601FBB9B1A00491CE4 /* UIViewController+ErrorAlert.swift in Sources */,
 				1F2E11AB1FB4A51500E92FE9 /* PrayerCell.swift in Sources */,
+				1FB906551FBB520E00491CE4 /* RegisterViewController.swift in Sources */,
 				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,
 				1F343DDC1FACE336009623CE /* EventCell.swift in Sources */,
 				1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */,
@@ -602,6 +625,7 @@
 				1FE5256B1FB627F000DC1F80 /* Menu.swift in Sources */,
 				1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */,
 				1F6354771FB26131003388AC /* HTTPRequest.swift in Sources */,
+				1FB9065B1FBB58D200491CE4 /* FloatingTextField.swift in Sources */,
 				1F1E01BD1FA2309A00E05229 /* AppDelegate.swift in Sources */,
 				1F6354681FB25897003388AC /* MiniJSONRepresentable.swift in Sources */,
 				1FE5256D1FB62B5E00DC1F80 /* MenuCell.swift in Sources */,

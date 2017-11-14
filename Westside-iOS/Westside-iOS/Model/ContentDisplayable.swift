@@ -1,6 +1,7 @@
 import Foundation
 
 enum ContentActionable {
+    case register
     case login
     case logout
 }

@@ -25,6 +25,7 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     var contentNavigationController: UINavigationController
     var menuNavigationController: UINavigationController
     var loginViewController: LoginViewController?
+    var registerViewController: RegisterViewController?
     
     let reachability: Reachability
     
@@ -233,13 +234,13 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     
     private func handleAction(action: ContentActionable) {
         switch action {
+        case .register:
+            showRegisterViewController()
         case .login:
             showLoginViewController()
         case .logout:
-            //Store.sharedInstance.logout()
+            Store.sharedStore.logout()
             menuNavigationController.setViewControllers([MenuViewController(title: "MVC")], animated: false)
-            //alertBannerViewController.loginStatusChanged()
-            //transitionToViewController(viewController: HomeViewController(showSplash: true))
         }
     }
     
@@ -258,9 +259,20 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         present(loginNavController, animated: true, completion: nil)
     }
     
-    func removeLoginViewController() {
+    func showRegisterViewController() {
+        registerViewController = RegisterViewController()
+        registerViewController!.delegate = self
+        
+        let registerNavController = UINavigationController(rootViewController: registerViewController!)
+        registerNavController.navigationBar.barTintColor = UIColor.primaryColor()
+        registerNavController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        present(registerNavController, animated: true, completion: nil)
+    }
+    
+    func removeViewController() {
         dismiss(animated: true) {
             self.loginViewController = nil
+            self.registerViewController = nil
         }
     }
 }
@@ -278,13 +290,22 @@ extension UIViewController {
     }
 }
 
-extension ContainerViewController: LoginViewControllerDelegate {
+extension ContainerViewController: LoginViewControllerDelegate, RegisterViewControllerDelegate {
     func loginDidSucceed() {
         menuNavigationController.setViewControllers([MenuViewController(title: "MVC")], animated: false)
-        removeLoginViewController()
+        removeViewController()
     }
     
     func loginDidCancel() {
-        removeLoginViewController()
+        removeViewController()
+    }
+    
+    func registrationDidSucceed() {
+        menuNavigationController.setViewControllers([MenuViewController(title: "MVC")], animated: false)
+        removeViewController()
+    }
+    
+    func registrationDidCancel() {
+        removeViewController()
     }
 }
