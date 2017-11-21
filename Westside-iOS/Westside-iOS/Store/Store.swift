@@ -165,6 +165,21 @@ class Store {
         ]
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
     }
+   
+    func joinEvent(event: Event, completion: @escaping (URLResult<UserEvent>) -> Void) {
+        let request: ResourceRequest<UserEvent> = TransportGateway.defaultGateway.makeRequest(identifiers: ["schedule", event.id.intValue])
+        request.method = .post
+        request.completion = { result in
+            completion(result)
+        }
+        TransportGateway.defaultGateway.enqueueForAuthentication(request)
+    }
+    
+    func leaveEvent(event: Event) {
+        let request: JSONRequest = TransportGateway.defaultGateway.makeRequest(identifiers: ["schedule", event.id.intValue])
+        request.method = .delete
+        TransportGateway.defaultGateway.enqueueForAuthentication(request)
+    }
     
     func tokenCompletion(completion: ((Error?) -> Void)?) -> (URLResult<OAuthToken>) -> Void {
         return { tokenResult in

@@ -60,6 +60,7 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
         
         westsideTabBarController = WestsideTabBarController()
         contentNavigationController = UINavigationController(rootViewController: westsideTabBarController)
+        contentNavigationController.title = "ContentNavController"
         
         reachability = Reachability(hostname: Store.resourceEndpoint)!
         
@@ -162,8 +163,14 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
             setupContentNavBar(for: viewController)
         }
         
+        if (viewController is EventDetailsController) {
+            viewController.navigationItem.leftBarButtonItem = nil
+            navigationController.viewControllers[0].title = "Back"
+        }
+        
         navigationController.isNavigationBarHidden = false
         navigationController.navigationBar.barTintColor = UIColor.primaryColor()
+        navigationController.navigationBar.tintColor = UIColor.white
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
     }
     

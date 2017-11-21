@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Westside_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="menusTableView" destination="3hW-hg-4N3" id="Jou-Cm-fxS"/>
+                <outlet property="nameLabel" destination="Qx3-vh-SYL" id="agv-ZY-azZ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="TZk-3b-Pgu"/>
             </connections>
         </placeholder>
@@ -30,8 +31,29 @@
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPW-ZA-Q3c">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O13-nR-faN">
+                            <rect key="frame" x="8" y="9" width="84" height="84"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="84" id="m0f-9Q-yUL"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Akbar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qx3-vh-SYL">
+                            <rect key="frame" x="8" y="101" width="359" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" red="0.16078431369999999" green="0.23921568630000001" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstItem="O13-nR-faN" firstAttribute="top" secondItem="kPW-ZA-Q3c" secondAttribute="top" constant="9" id="4Po-Ea-1ca"/>
+                        <constraint firstItem="O13-nR-faN" firstAttribute="leading" secondItem="kPW-ZA-Q3c" secondAttribute="leading" constant="8" id="570-co-xkd"/>
+                        <constraint firstAttribute="bottom" secondItem="Qx3-vh-SYL" secondAttribute="bottom" constant="14" id="Gex-cj-54S"/>
+                        <constraint firstItem="Qx3-vh-SYL" firstAttribute="top" secondItem="O13-nR-faN" secondAttribute="bottom" constant="8" id="Hwt-ke-noY"/>
+                        <constraint firstAttribute="trailing" secondItem="Qx3-vh-SYL" secondAttribute="trailing" constant="8" id="ZDL-gS-65Y"/>
+                        <constraint firstItem="Qx3-vh-SYL" firstAttribute="leading" secondItem="kPW-ZA-Q3c" secondAttribute="leading" constant="8" id="wbr-5k-UHa"/>
+                        <constraint firstAttribute="trailing" secondItem="O13-nR-faN" secondAttribute="trailing" constant="283" id="y2k-w3-e5x"/>
                         <constraint firstAttribute="height" constant="136" id="zsR-FZ-w7c"/>
                     </constraints>
                 </view>

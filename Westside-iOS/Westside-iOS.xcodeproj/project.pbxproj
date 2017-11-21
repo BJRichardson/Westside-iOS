@@ -12,6 +12,11 @@
 		1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E01C51FA2309A00E05229 /* LaunchScreen.storyboard */; };
 		1F1E01D21FA2309A00E05229 /* Westside_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01D11FA2309A00E05229 /* Westside_iOSTests.swift */; };
 		1F1E01DD1FA2309A00E05229 /* Westside_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */; };
+		1F21543A1FBF6C4300A2BC2D /* EventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2154391FBF6C4300A2BC2D /* EventDetailsController.swift */; };
+		1F21543E1FBF6E0E00A2BC2D /* EventDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F21543D1FBF6E0E00A2BC2D /* EventDetailsController.xib */; };
+		1F2154401FBF7DE600A2BC2D /* ResolvingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F21543F1FBF7DE600A2BC2D /* ResolvingImageView.swift */; };
+		1F2154421FBF80BA00A2BC2D /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2154411FBF80BA00A2BC2D /* ImageStore.swift */; };
+		1F2154481FBF91F700A2BC2D /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2154471FBF91F700A2BC2D /* UserEvent.swift */; };
 		1F2E11951FB37C7F00E92FE9 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */; };
 		1F2E11971FB37CD000E92FE9 /* AnnouncementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */; };
 		1F2E11991FB3895800E92FE9 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E11981FB3895800E92FE9 /* Announcement.swift */; };
@@ -137,6 +142,11 @@
 		1F1E01D81FA2309A00E05229 /* Westside-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Westside-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F1E01DC1FA2309A00E05229 /* Westside_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Westside_iOSUITests.swift; sourceTree = "<group>"; };
 		1F1E01DE1FA2309A00E05229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F2154391FBF6C4300A2BC2D /* EventDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsController.swift; sourceTree = "<group>"; };
+		1F21543D1FBF6E0E00A2BC2D /* EventDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsController.xib; sourceTree = "<group>"; };
+		1F21543F1FBF7DE600A2BC2D /* ResolvingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolvingImageView.swift; sourceTree = "<group>"; };
+		1F2154411FBF80BA00A2BC2D /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		1F2154471FBF91F700A2BC2D /* UserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvent.swift; sourceTree = "<group>"; };
 		1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnouncementsViewController.xib; sourceTree = "<group>"; };
 		1F2E11981FB3895800E92FE9 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
@@ -295,6 +305,8 @@
 			children = (
 				1F343DD61FACDF4D009623CE /* EventsViewController.swift */,
 				1F343DD81FACE002009623CE /* EventsViewController.xib */,
+				1F2154391FBF6C4300A2BC2D /* EventDetailsController.swift */,
+				1F21543D1FBF6E0E00A2BC2D /* EventDetailsController.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -327,6 +339,8 @@
 				1F6354731FB26130003388AC /* URLValue.swift */,
 				1F6354631FB24D64003388AC /* MiniJSONObject.swift */,
 				1F6354671FB25897003388AC /* MiniJSONRepresentable.swift */,
+				1F21543F1FBF7DE600A2BC2D /* ResolvingImageView.swift */,
+				1F2154411FBF80BA00A2BC2D /* ImageStore.swift */,
 			);
 			path = WebUtils;
 			sourceTree = "<group>";
@@ -382,6 +396,7 @@
 				1F2E11A81FB4A41300E92FE9 /* Prayer.swift */,
 				1FE5256A1FB627F000DC1F80 /* Menu.swift */,
 				1FE525701FB6376800DC1F80 /* ContentDisplayable.swift */,
+				1F2154471FBF91F700A2BC2D /* UserEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -559,6 +574,7 @@
 				1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */,
 				1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */,
 				1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */,
+				1F21543E1FBF6E0E00A2BC2D /* EventDetailsController.xib in Resources */,
 				1FE5256F1FB62BDB00DC1F80 /* MenuCell.xib in Resources */,
 				1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */,
 				1FE525691FB6235100DC1F80 /* MenuViewController.xib in Resources */,
@@ -594,7 +610,9 @@
 				1FE525741FB63C8800DC1F80 /* LoginViewController.swift in Sources */,
 				1F99B4521FAA5E5300BCEEBD /* Reachability.swift in Sources */,
 				1F99B4541FAA5F2200BCEEBD /* Toast.swift in Sources */,
+				1F21543A1FBF6C4300A2BC2D /* EventDetailsController.swift in Sources */,
 				1F2E11991FB3895800E92FE9 /* Announcement.swift in Sources */,
+				1F2154421FBF80BA00A2BC2D /* ImageStore.swift in Sources */,
 				1FE525711FB6376800DC1F80 /* ContentDisplayable.swift in Sources */,
 				1F2E11951FB37C7F00E92FE9 /* AnnouncementsViewController.swift in Sources */,
 				1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */,
@@ -610,6 +628,7 @@
 				1F2E11AB1FB4A51500E92FE9 /* PrayerCell.swift in Sources */,
 				1FB906551FBB520E00491CE4 /* RegisterViewController.swift in Sources */,
 				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,
+				1F2154481FBF91F700A2BC2D /* UserEvent.swift in Sources */,
 				1F343DDC1FACE336009623CE /* EventCell.swift in Sources */,
 				1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */,
 				1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */,
@@ -620,6 +639,7 @@
 				1F63547E1FB2625D003388AC /* ModelGraphTransformer.swift in Sources */,
 				1F6354541FB10E3B003388AC /* Event.swift in Sources */,
 				1F2E11A51FB4A2A400E92FE9 /* PrayersViewController.swift in Sources */,
+				1F2154401FBF7DE600A2BC2D /* ResolvingImageView.swift in Sources */,
 				1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */,
 				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,
 				1FE5256B1FB627F000DC1F80 /* Menu.swift in Sources */,

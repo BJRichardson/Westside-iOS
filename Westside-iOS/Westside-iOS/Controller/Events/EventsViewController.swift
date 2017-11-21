@@ -24,6 +24,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(class: EventCell.self)
         tableView.isHidden = true
+        tableView.delegate = self
     }
     
     // MARK: - Actions
@@ -51,6 +52,8 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.timeLabel.text = event.timeString
         cell.groupLabel.text = event.groups?.first?.name
         
+        cell.descriptionLabel.isUserInteractionEnabled = false
+        
         return cell
     }
     
@@ -67,6 +70,15 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
             loadingIndicator?.stopAnimating()
             tableView.isHidden = false
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let event = events[indexPath.row]
+        let eventVC = EventDetailsController(event: event)
+        
+        navigationController?.pushViewController(eventVC, animated: true)
     }
 }
 

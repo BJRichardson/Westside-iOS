@@ -3,6 +3,7 @@ import UIKit
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var menusTableView: UITableView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     var menuItems: Array<Menu> = []
     
@@ -32,8 +33,13 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if (Store.sharedStore.isUserLoggedIn) {
             menuItems = Store.sharedStore.authedMenus
+            guard let me = Store.sharedStore.user else {
+                return
+            }
+            nameLabel.text = "Hello, " +  me.firstName
         } else {
             menuItems = Store.sharedStore.unauthedMenus
+            nameLabel.isHidden = true
         }
     }
     
@@ -55,6 +61,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let menu = menuItems[indexPath.row]
         
         containerViewController?.displayContent(content: menu.content, title: menu.title, destination: menu.destination)

@@ -1,14 +1,6 @@
 import Foundation
 
-class Event: /*NSObject, NSCoding,*/ JSONInstantiable {
-    private static let idKey = "id"
-    private static let titleKey = "title"
-    private static let descriptionKey = "description"
-    private static let startTimeKey = "startTime"
-    private static let endTimeKey = "endTime"
-    private static let moreInfoKey = "moreInformation"
-    private static let imageUrlKey = "imageUrl"
-    private static let groupsKey = "groups"
+class Event: JSONInstantiable {
     
     var id: NSNumber!
     var title: String!
@@ -18,6 +10,7 @@ class Event: /*NSObject, NSCoding,*/ JSONInstantiable {
     var moreInformation: String?
     var imageUrl: String?
     var groups: Array<Group>?
+    var users: Array<User>?
     
     //MARK: - JSONInstantiable
     required init() {}
@@ -42,28 +35,6 @@ class Event: /*NSObject, NSCoding,*/ JSONInstantiable {
         dateFormatter.dateFormat = "hh:mm a"
         return dateFormatter.string(from: startTime)
     }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        id = aDecoder.decodeObject(forKey: Event.idKey) as? NSNumber
-//        title = aDecoder.decodeObject(forKey: Event.titleKey) as? String
-//        eventDescription = aDecoder.decodeObject(forKey: Event.descriptionKey) as? String
-//        startTime = aDecoder.decodeObject(forKey: Event.startTimeKey) as? Date
-//        endTime = aDecoder.decodeObject(forKey: Event.endTimeKey) as? Date
-//        moreInformation = aDecoder.decodeObject(forKey: Event.moreInfoKey) as? String
-//        imageUrl = aDecoder.decodeObject(forKey: Event.imageUrlKey) as? String
-//        groups = aDecoder.decodeObject(forKey: Event.groupsKey) as? Array<Group>
-//    }
-//
-//    func encode(with aCoder: NSCoder) {
-//        aCoder.encode(id, forKey: Event.idKey)
-//        aCoder.encode(title, forKey: Event.titleKey)
-//        aCoder.encode(eventDescription, forKey: Event.descriptionKey)
-//        aCoder.encode(startTime, forKey: Event.startTimeKey)
-//        aCoder.encode(endTime, forKey: Event.endTimeKey)
-//        aCoder.encode(moreInformation, forKey: Event.moreInfoKey)
-//        aCoder.encode(imageUrl, forKey: Event.imageUrlKey)
-//        aCoder.encode(groups, forKey: Event.groupsKey)
-//    }
 
     func read(from jsonObject: MiniJSONObject) throws {
         id = try jsonObject.decode("id")
@@ -73,6 +44,7 @@ class Event: /*NSObject, NSCoding,*/ JSONInstantiable {
         endTime = try jsonObject.decode("endTime")
         moreInformation = try jsonObject.decode("moreInformation")
         imageUrl = try jsonObject.decode("imageUrl")
-        groups = try jsonObject.decode("groups") 
+        groups = try jsonObject.decode("groups")
+        users = try jsonObject.decode("users") 
     }
 }
