@@ -54,6 +54,13 @@
 		1F99B4571FAA5F6A00BCEEBD /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99B4561FAA5F6A00BCEEBD /* Store.swift */; };
 		1F99B4B91FAB764000BCEEBD /* Forge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; };
 		1F99B4BA1FAB764000BCEEBD /* Forge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99B4B41FAB738400BCEEBD /* Forge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FAB2BAD1FCDF39F00CACA6D /* MinistriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2BAC1FCDF39F00CACA6D /* MinistriesViewController.swift */; };
+		1FAB2BAF1FCDF8EF00CACA6D /* MinistriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAB2BAE1FCDF8EF00CACA6D /* MinistriesViewController.xib */; };
+		1FAB2BB11FCE02AC00CACA6D /* MinistryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2BB01FCE02AC00CACA6D /* MinistryCell.swift */; };
+		1FAB2BB31FCE03BE00CACA6D /* MinistryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAB2BB21FCE03BE00CACA6D /* MinistryCell.xib */; };
+		1FAB2BB51FCE08E500CACA6D /* MinistryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2BB41FCE08E500CACA6D /* MinistryViewController.swift */; };
+		1FAB2BB71FCE094E00CACA6D /* MinistryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAB2BB61FCE094E00CACA6D /* MinistryViewController.xib */; };
+		1FAB2BB91FD0820500CACA6D /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAB2BB81FD0820500CACA6D /* UserGroup.swift */; };
 		1FB906551FBB520E00491CE4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB906541FBB520E00491CE4 /* RegisterViewController.swift */; };
 		1FB906571FBB52AD00491CE4 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB906561FBB52AD00491CE4 /* RegisterViewController.xib */; };
 		1FB9065B1FBB58D200491CE4 /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */; };
@@ -183,6 +190,13 @@
 		1F99B4531FAA5F2200BCEEBD /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		1F99B4561FAA5F6A00BCEEBD /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		1F99B4AD1FAB738400BCEEBD /* Forge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Forge.xcodeproj; path = stkstdios/Forge.xcodeproj; sourceTree = "<group>"; };
+		1FAB2BAC1FCDF39F00CACA6D /* MinistriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinistriesViewController.swift; sourceTree = "<group>"; };
+		1FAB2BAE1FCDF8EF00CACA6D /* MinistriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinistriesViewController.xib; sourceTree = "<group>"; };
+		1FAB2BB01FCE02AC00CACA6D /* MinistryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinistryCell.swift; sourceTree = "<group>"; };
+		1FAB2BB21FCE03BE00CACA6D /* MinistryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinistryCell.xib; sourceTree = "<group>"; };
+		1FAB2BB41FCE08E500CACA6D /* MinistryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinistryViewController.swift; sourceTree = "<group>"; };
+		1FAB2BB61FCE094E00CACA6D /* MinistryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MinistryViewController.xib; sourceTree = "<group>"; };
+		1FAB2BB81FD0820500CACA6D /* UserGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
 		1FB906541FBB520E00491CE4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1FB906561FBB52AD00491CE4 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
@@ -323,6 +337,8 @@
 				1FE5256C1FB62B5E00DC1F80 /* MenuCell.swift */,
 				1FE5256E1FB62BDB00DC1F80 /* MenuCell.xib */,
 				1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */,
+				1FAB2BB01FCE02AC00CACA6D /* MinistryCell.swift */,
+				1FAB2BB21FCE03BE00CACA6D /* MinistryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,6 +393,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1FAB2BA91FCDF37E00CACA6D /* Ministries */ = {
+			isa = PBXGroup;
+			children = (
+				1FAB2BAC1FCDF39F00CACA6D /* MinistriesViewController.swift */,
+				1FAB2BAE1FCDF8EF00CACA6D /* MinistriesViewController.xib */,
+				1FAB2BB41FCE08E500CACA6D /* MinistryViewController.swift */,
+				1FAB2BB61FCE094E00CACA6D /* MinistryViewController.xib */,
+			);
+			path = Ministries;
+			sourceTree = "<group>";
+		};
 		1FB906511FBB51E700491CE4 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +424,7 @@
 				1FE5256A1FB627F000DC1F80 /* Menu.swift */,
 				1FE525701FB6376800DC1F80 /* ContentDisplayable.swift */,
 				1F2154471FBF91F700A2BC2D /* UserEvent.swift */,
+				1FAB2BB81FD0820500CACA6D /* UserGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +432,7 @@
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FAB2BA91FCDF37E00CACA6D /* Ministries */,
 				1FB906511FBB51E700491CE4 /* Register */,
 				1FE525721FB63C6600DC1F80 /* Login */,
 				1F2E11A31FB4A23800E92FE9 /* Prayers */,
@@ -571,10 +600,13 @@
 				1F2E11AD1FB4A5A000E92FE9 /* PrayerCell.xib in Resources */,
 				1F2E11A21FB3925400E92FE9 /* AnnouncementCell.xib in Resources */,
 				1F2E11971FB37CD000E92FE9 /* AnnouncementsViewController.xib in Resources */,
+				1FAB2BAF1FCDF8EF00CACA6D /* MinistriesViewController.xib in Resources */,
 				1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */,
 				1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */,
 				1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */,
 				1F21543E1FBF6E0E00A2BC2D /* EventDetailsController.xib in Resources */,
+				1FAB2BB31FCE03BE00CACA6D /* MinistryCell.xib in Resources */,
+				1FAB2BB71FCE094E00CACA6D /* MinistryViewController.xib in Resources */,
 				1FE5256F1FB62BDB00DC1F80 /* MenuCell.xib in Resources */,
 				1F99B4491FAA0AD400BCEEBD /* TestViewController.xib in Resources */,
 				1FE525691FB6235100DC1F80 /* MenuViewController.xib in Resources */,
@@ -614,6 +646,7 @@
 				1F2E11991FB3895800E92FE9 /* Announcement.swift in Sources */,
 				1F2154421FBF80BA00A2BC2D /* ImageStore.swift in Sources */,
 				1FE525711FB6376800DC1F80 /* ContentDisplayable.swift in Sources */,
+				1FAB2BAD1FCDF39F00CACA6D /* MinistriesViewController.swift in Sources */,
 				1F2E11951FB37C7F00E92FE9 /* AnnouncementsViewController.swift in Sources */,
 				1F99B44C1FAA0E2C00BCEEBD /* UIViewController+Child.swift in Sources */,
 				1F2E119B1FB38DEB00E92FE9 /* User.swift in Sources */,
@@ -630,12 +663,14 @@
 				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,
 				1F2154481FBF91F700A2BC2D /* UserEvent.swift in Sources */,
 				1F343DDC1FACE336009623CE /* EventCell.swift in Sources */,
+				1FAB2BB11FCE02AC00CACA6D /* MinistryCell.swift in Sources */,
 				1F343DE31FB0F41D009623CE /* StringExtensions.swift in Sources */,
 				1F99B44E1FAA14BA00BCEEBD /* UIColor+Westside.swift in Sources */,
 				1F6354791FB26131003388AC /* TransportGateway.swift in Sources */,
 				1F343DD71FACDF4D009623CE /* EventsViewController.swift in Sources */,
 				1F6354761FB26131003388AC /* Transportable.swift in Sources */,
 				1F6354641FB24D64003388AC /* MiniJSONObject.swift in Sources */,
+				1FAB2BB51FCE08E500CACA6D /* MinistryViewController.swift in Sources */,
 				1F63547E1FB2625D003388AC /* ModelGraphTransformer.swift in Sources */,
 				1F6354541FB10E3B003388AC /* Event.swift in Sources */,
 				1F2E11A51FB4A2A400E92FE9 /* PrayersViewController.swift in Sources */,
@@ -645,6 +680,7 @@
 				1FE5256B1FB627F000DC1F80 /* Menu.swift in Sources */,
 				1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */,
 				1F6354771FB26131003388AC /* HTTPRequest.swift in Sources */,
+				1FAB2BB91FD0820500CACA6D /* UserGroup.swift in Sources */,
 				1FB9065B1FBB58D200491CE4 /* FloatingTextField.swift in Sources */,
 				1F1E01BD1FA2309A00E05229 /* AppDelegate.swift in Sources */,
 				1F6354681FB25897003388AC /* MiniJSONRepresentable.swift in Sources */,

@@ -57,8 +57,19 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if (section == 0) {
+//            return 1
+//        }
         return menuItems.count
     }
+    
+//    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 0.5
+//    }
+//
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        <#code#>
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

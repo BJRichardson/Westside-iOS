@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="n2k-zq-Xa5" customClass="MinistryCell" customModule="Westside_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n2k-zq-Xa5" id="ENL-ed-5aR">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoW-cl-Qm3">
+                        <rect key="frame" x="16" y="11" width="343" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D20-kp-k9M">
+                        <rect key="frame" x="16" y="43" width="343" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="D20-kp-k9M" firstAttribute="trailing" secondItem="ENL-ed-5aR" secondAttribute="trailingMargin" id="FsO-aY-iy3"/>
+                    <constraint firstItem="KoW-cl-Qm3" firstAttribute="trailing" secondItem="ENL-ed-5aR" secondAttribute="trailingMargin" id="XcF-hW-JoS"/>
+                    <constraint firstItem="KoW-cl-Qm3" firstAttribute="leading" secondItem="ENL-ed-5aR" secondAttribute="leadingMargin" id="eEK-db-gXr"/>
+                    <constraint firstItem="KoW-cl-Qm3" firstAttribute="top" secondItem="ENL-ed-5aR" secondAttribute="topMargin" id="gKh-7Q-ebk"/>
+                    <constraint firstItem="D20-kp-k9M" firstAttribute="leading" secondItem="ENL-ed-5aR" secondAttribute="leadingMargin" id="ia0-UN-ruJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="D20-kp-k9M" secondAttribute="bottom" constant="3" id="lPd-1h-URM"/>
+                    <constraint firstItem="D20-kp-k9M" firstAttribute="top" secondItem="KoW-cl-Qm3" secondAttribute="bottom" constant="8" id="r8z-Gt-Yk8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="chairPersonLabel" destination="D20-kp-k9M" id="7xD-bj-PbZ"/>
+                <outlet property="nameLabel" destination="KoW-cl-Qm3" id="9ey-hP-ebW"/>
+            </connections>
+            <point key="canvasLocation" x="-16.5" y="-154"/>
+        </tableViewCell>
+    </objects>
+</document>

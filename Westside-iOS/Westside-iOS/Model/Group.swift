@@ -8,6 +8,7 @@ final class Group : JSONInstantiable {
     var phone: String?
     var imageUrl: String?
     var id: NSNumber!
+    var members: Array<User>?
     
     //MARK: - JSONInstantiable
     required init() {}
@@ -24,6 +25,7 @@ final class Group : JSONInstantiable {
         email = try jsonObject.decode("email")
         phone = try jsonObject.decode("phone")
         imageUrl = try jsonObject.decode("imageUrl")
+        members = try jsonObject.decode("users")
     }
     
     static func matchKeys() -> (managedKey: String, jsonKey: String)? {

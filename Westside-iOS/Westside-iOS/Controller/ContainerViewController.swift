@@ -163,9 +163,15 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
             setupContentNavBar(for: viewController)
         }
         
-        if (viewController is EventDetailsController) {
+        if (viewController is EventDetailsController
+            || viewController is MinistriesViewController
+            || viewController is MinistryViewController) {
             viewController.navigationItem.leftBarButtonItem = nil
-            navigationController.viewControllers[0].title = "Back"
+            
+            for var i in (0..<navigationController.viewControllers.count - 1) {
+                viewController.navigationItem.leftBarButtonItem = nil
+                navigationController.viewControllers[i].title = "Back"
+            }
         }
         
         navigationController.isNavigationBarHidden = false
@@ -231,6 +237,8 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     func displayContent(content: ContentDisplayable, title: String, destination: UIViewController?) {
         menuState = .closed
         switch content {
+        case .push:
+            pushToViewController(viewController: destination!)
         case .view:
             transitionToViewController(viewController: destination!)
         case .action(let action):
@@ -254,6 +262,10 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     func transitionToViewController(viewController: UIViewController) {
         contentNavigationController.setViewControllers([viewController], animated: false)
         setupContentNavBar(for: viewController)
+    }
+
+    func pushToViewController(viewController: UIViewController) {
+        contentNavigationController.pushViewController(viewController, animated: true)
     }
     
     func showLoginViewController() {

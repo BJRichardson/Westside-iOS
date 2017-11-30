@@ -17,6 +17,7 @@ class Store {
     
     var unauthedMenus: Array<Menu> {
         var menuItems: Array<Menu> = []
+        menuItems.append(Menu(title: "Ministries", destination: MinistriesViewController(title: "Ministries"), content: .push))
         menuItems.append(Menu(title: "Login", destination: nil, content: .action(.login)))
         menuItems.append(Menu(title: "Create Account", destination: nil, content: .action(.register)))
         return menuItems
@@ -24,6 +25,7 @@ class Store {
     
     var authedMenus: Array<Menu> {
         var menuItems: Array<Menu> = []
+        menuItems.append(Menu(title: "Ministries", destination: MinistriesViewController(title: "Ministries"), content: .view))
         menuItems.append(Menu(title: "Logout", destination: nil, content: .action(.logout)))
         return menuItems
     }
@@ -127,6 +129,19 @@ class Store {
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
     }
     
+    func fetchMinistries(completion: @escaping (URLResult<Array<Group>>) -> Void) {
+        let request: ResourceListRequest<Group> = TransportGateway.defaultGateway.makeRequest(identifiers: ["groups"])
+        request.basicAuthorizationUsername = environment.clientId
+        request.basicAuthorizationPassword = environment.clientSecret
+        request.completion = { result in
+            if case .value = result {
+                //self.saveContext()
+            }
+            completion(result)
+        }
+        TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
     func loginWith(username: String, password: String, completion: ((Error?) -> Void)?) {
         let request: ResourceRequest<OAuthToken> = TransportGateway.defaultGateway.makeRequest(identifiers: ["auth", "token"])
         request.completion = tokenCompletion(completion: completion)
@@ -178,6 +193,24 @@ class Store {
     func leaveEvent(event: Event) {
         let request: JSONRequest = TransportGateway.defaultGateway.makeRequest(identifiers: ["schedule", event.id.intValue])
         request.method = .delete
+        TransportGateway.defaultGateway.enqueueForAuthentication(request)
+    }
+    
+    func joinMinistry(ministry: Group, completion: @escaping (URLResult<UserGroup>) -> Void) {
+        let request: ResourceRequest<UserGroup> = TransportGateway.defaultGateway.makeRequest(identifiers: ["ministries", ministry.id.intValue])
+        request.method = .post
+        request.completion = { result in
+            completion(result)
+        }
+        TransportGateway.defaultGateway.enqueueForAuthentication(request)
+    }
+    
+    func leaveMinistry(ministry: Group, completion: @escaping (URLResult<Any?>) -> Void) {
+        let request: JSONRequest = TransportGateway.defaultGateway.makeRequest(identifiers: ["ministries", ministry.id.intValue])
+        request.method = .delete
+        request.completion = { result in
+            completion(result)
+        }
         TransportGateway.defaultGateway.enqueueForAuthentication(request)
     }
     

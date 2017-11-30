@@ -7,6 +7,7 @@ enum ContentActionable {
 }
 
 enum ContentDisplayable {
+    case push
     case view
     case action(ContentActionable)
 }
