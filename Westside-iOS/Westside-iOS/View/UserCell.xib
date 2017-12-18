@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yJk-N5-rBa" customClass="UserCell" customModule="Westside_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yJk-N5-rBa" id="Syr-74-zzI">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adD-PR-a2q">
+                        <rect key="frame" x="16" y="12" width="359" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BpC-3h-nD6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFE-U1-dQ8">
+                        <rect key="frame" x="0.0" y="41" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.67450980390000004" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NFE-U1-dQ8" firstAttribute="top" secondItem="adD-PR-a2q" secondAttribute="bottom" constant="8" id="567-Zq-tP0"/>
+                    <constraint firstAttribute="bottom" secondItem="NFE-U1-dQ8" secondAttribute="bottom" constant="1.5" id="IpW-J9-PnA"/>
+                    <constraint firstItem="adD-PR-a2q" firstAttribute="top" secondItem="Syr-74-zzI" secondAttribute="top" constant="12" id="PYZ-Fz-1RP"/>
+                    <constraint firstAttribute="trailing" secondItem="NFE-U1-dQ8" secondAttribute="trailing" id="mOk-kt-55o"/>
+                    <constraint firstItem="adD-PR-a2q" firstAttribute="leading" secondItem="Syr-74-zzI" secondAttribute="leading" constant="16" id="oh9-6g-U5y"/>
+                    <constraint firstItem="NFE-U1-dQ8" firstAttribute="leading" secondItem="Syr-74-zzI" secondAttribute="leading" id="p9v-Qi-1tg"/>
+                    <constraint firstAttribute="trailing" secondItem="adD-PR-a2q" secondAttribute="trailing" id="qSo-hz-YU7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="userNameLabel" destination="adD-PR-a2q" id="uic-yd-sBi"/>
+            </connections>
+            <point key="canvasLocation" x="43.5" y="-124"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="Westside_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndicator" destination="T5s-OB-Dfu" id="QaA-pC-KgR"/>
+                <outlet property="tableView" destination="pgS-Dq-hgB" id="Sfh-M4-dax"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Iwg-Fs-BHV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pgS-Dq-hgB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gbW-uY-6iX"/>
+                        <outlet property="delegate" destination="-1" id="QRj-zQ-Vyr"/>
+                    </connections>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="T5s-OB-Dfu">
+                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pgS-Dq-hgB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="04u-4N-7ib"/>
+                <constraint firstItem="pgS-Dq-hgB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5zF-3X-q4Z"/>
+                <constraint firstItem="pgS-Dq-hgB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="AFI-DU-K5l"/>
+                <constraint firstItem="T5s-OB-Dfu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="303" id="U3Z-Ne-eIL"/>
+                <constraint firstItem="T5s-OB-Dfu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="177" id="auK-f8-1xr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="T5s-OB-Dfu" secondAttribute="trailing" constant="178" id="dFb-f2-QsL"/>
+                <constraint firstItem="pgS-Dq-hgB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kjp-c1-ZlK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="T5s-OB-Dfu" secondAttribute="bottom" constant="324" id="pbc-Wf-SfP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="135.5"/>
+        </view>
+    </objects>
+</document>

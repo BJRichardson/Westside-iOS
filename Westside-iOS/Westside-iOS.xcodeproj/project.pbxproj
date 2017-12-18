@@ -17,6 +17,10 @@
 		1F2154401FBF7DE600A2BC2D /* ResolvingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F21543F1FBF7DE600A2BC2D /* ResolvingImageView.swift */; };
 		1F2154421FBF80BA00A2BC2D /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2154411FBF80BA00A2BC2D /* ImageStore.swift */; };
 		1F2154481FBF91F700A2BC2D /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2154471FBF91F700A2BC2D /* UserEvent.swift */; };
+		1F235CD51FE2F5630034DA16 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235CD41FE2F5630034DA16 /* UsersViewController.swift */; };
+		1F235CD71FE2F8250034DA16 /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F235CD61FE2F8250034DA16 /* UsersViewController.xib */; };
+		1F235CD91FE2F9010034DA16 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235CD81FE2F9010034DA16 /* UserCell.swift */; };
+		1F235CDB1FE2F92B0034DA16 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F235CDA1FE2F92B0034DA16 /* UserCell.xib */; };
 		1F2E11951FB37C7F00E92FE9 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */; };
 		1F2E11971FB37CD000E92FE9 /* AnnouncementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */; };
 		1F2E11991FB3895800E92FE9 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2E11981FB3895800E92FE9 /* Announcement.swift */; };
@@ -76,6 +80,9 @@
 		1FE525711FB6376800DC1F80 /* ContentDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE525701FB6376800DC1F80 /* ContentDisplayable.swift */; };
 		1FE525741FB63C8800DC1F80 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE525731FB63C8800DC1F80 /* LoginViewController.swift */; };
 		1FE525771FB63EFD00DC1F80 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE525761FB63EFD00DC1F80 /* LoginViewController.xib */; };
+		1FF57A161FE46B9C00D1428E /* NavigatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF57A151FE46B9C00D1428E /* NavigatableViewController.swift */; };
+		1FF57A1A1FE8504A00D1428E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF57A191FE8504A00D1428E /* UserViewController.swift */; };
+		1FF57A1C1FE8521700D1428E /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FF57A1B1FE8521700D1428E /* UserViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +161,10 @@
 		1F21543F1FBF7DE600A2BC2D /* ResolvingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolvingImageView.swift; sourceTree = "<group>"; };
 		1F2154411FBF80BA00A2BC2D /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		1F2154471FBF91F700A2BC2D /* UserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvent.swift; sourceTree = "<group>"; };
+		1F235CD41FE2F5630034DA16 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		1F235CD61FE2F8250034DA16 /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		1F235CD81FE2F9010034DA16 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		1F235CDA1FE2F92B0034DA16 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		1F2E11941FB37C7F00E92FE9 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		1F2E11961FB37CD000E92FE9 /* AnnouncementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnouncementsViewController.xib; sourceTree = "<group>"; };
 		1F2E11981FB3895800E92FE9 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
@@ -212,6 +223,9 @@
 		1FE525701FB6376800DC1F80 /* ContentDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDisplayable.swift; sourceTree = "<group>"; };
 		1FE525731FB63C8800DC1F80 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FE525761FB63EFD00DC1F80 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		1FF57A151FE46B9C00D1428E /* NavigatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatableViewController.swift; sourceTree = "<group>"; };
+		1FF57A191FE8504A00D1428E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		1FF57A1B1FE8521700D1428E /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +310,17 @@
 			path = "Westside-iOSUITests";
 			sourceTree = "<group>";
 		};
+		1F235CD11FE2F4410034DA16 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				1F235CD41FE2F5630034DA16 /* UsersViewController.swift */,
+				1F235CD61FE2F8250034DA16 /* UsersViewController.xib */,
+				1FF57A191FE8504A00D1428E /* UserViewController.swift */,
+				1FF57A1B1FE8521700D1428E /* UserViewController.xib */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		1F2E11911FB37C1F00E92FE9 /* Announcements */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +364,8 @@
 				1FB9065A1FBB58D200491CE4 /* FloatingTextField.swift */,
 				1FAB2BB01FCE02AC00CACA6D /* MinistryCell.swift */,
 				1FAB2BB21FCE03BE00CACA6D /* MinistryCell.xib */,
+				1F235CD81FE2F9010034DA16 /* UserCell.swift */,
+				1F235CDA1FE2F92B0034DA16 /* UserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,6 +459,7 @@
 		1FCB41191FA8B96300B05B67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F235CD11FE2F4410034DA16 /* Users */,
 				1FAB2BA91FCDF37E00CACA6D /* Ministries */,
 				1FB906511FBB51E700491CE4 /* Register */,
 				1FE525721FB63C6600DC1F80 /* Login */,
@@ -445,6 +473,7 @@
 				1F99B4481FAA0AD400BCEEBD /* TestViewController.xib */,
 				1FE525641FB622C900DC1F80 /* MenuViewController.swift */,
 				1FE525681FB6235100DC1F80 /* MenuViewController.xib */,
+				1FF57A151FE46B9C00D1428E /* NavigatableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -597,11 +626,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F235CD71FE2F8250034DA16 /* UsersViewController.xib in Resources */,
 				1F2E11AD1FB4A5A000E92FE9 /* PrayerCell.xib in Resources */,
 				1F2E11A21FB3925400E92FE9 /* AnnouncementCell.xib in Resources */,
 				1F2E11971FB37CD000E92FE9 /* AnnouncementsViewController.xib in Resources */,
+				1F235CDB1FE2F92B0034DA16 /* UserCell.xib in Resources */,
 				1FAB2BAF1FCDF8EF00CACA6D /* MinistriesViewController.xib in Resources */,
 				1F1E01C71FA2309A00E05229 /* LaunchScreen.storyboard in Resources */,
+				1FF57A1C1FE8521700D1428E /* UserViewController.xib in Resources */,
 				1F343DD91FACE002009623CE /* EventsViewController.xib in Resources */,
 				1FCB41181FA8B85200B05B67 /* ContainerViewController.xib in Resources */,
 				1F21543E1FBF6E0E00A2BC2D /* EventDetailsController.xib in Resources */,
@@ -652,6 +684,7 @@
 				1F2E119B1FB38DEB00E92FE9 /* User.swift in Sources */,
 				1F2E11A91FB4A41300E92FE9 /* Prayer.swift in Sources */,
 				1FE525651FB622C900DC1F80 /* MenuViewController.swift in Sources */,
+				1F235CD91FE2F9010034DA16 /* UserCell.swift in Sources */,
 				1F63547A1FB26131003388AC /* TimestampFormatter.swift in Sources */,
 				1F6354781FB26131003388AC /* URLValue.swift in Sources */,
 				1F2E119E1FB390D700E92FE9 /* AnnouncementCell.swift in Sources */,
@@ -660,6 +693,7 @@
 				1FB906601FBB9B1A00491CE4 /* UIViewController+ErrorAlert.swift in Sources */,
 				1F2E11AB1FB4A51500E92FE9 /* PrayerCell.swift in Sources */,
 				1FB906551FBB520E00491CE4 /* RegisterViewController.swift in Sources */,
+				1FF57A1A1FE8504A00D1428E /* UserViewController.swift in Sources */,
 				1F343DE11FACFBB8009623CE /* ActionCell.swift in Sources */,
 				1F2154481FBF91F700A2BC2D /* UserEvent.swift in Sources */,
 				1F343DDC1FACE336009623CE /* EventCell.swift in Sources */,
@@ -671,11 +705,13 @@
 				1F6354761FB26131003388AC /* Transportable.swift in Sources */,
 				1F6354641FB24D64003388AC /* MiniJSONObject.swift in Sources */,
 				1FAB2BB51FCE08E500CACA6D /* MinistryViewController.swift in Sources */,
+				1FF57A161FE46B9C00D1428E /* NavigatableViewController.swift in Sources */,
 				1F63547E1FB2625D003388AC /* ModelGraphTransformer.swift in Sources */,
 				1F6354541FB10E3B003388AC /* Event.swift in Sources */,
 				1F2E11A51FB4A2A400E92FE9 /* PrayersViewController.swift in Sources */,
 				1F2154401FBF7DE600A2BC2D /* ResolvingImageView.swift in Sources */,
 				1F99B4451FAA069E00BCEEBD /* WestsideTabBarContoller.swift in Sources */,
+				1F235CD51FE2F5630034DA16 /* UsersViewController.swift in Sources */,
 				1FCB41161FA8B82C00B05B67 /* ContainerViewController.swift in Sources */,
 				1FE5256B1FB627F000DC1F80 /* Menu.swift in Sources */,
 				1F99B4471FAA092A00BCEEBD /* TestViewController.swift in Sources */,

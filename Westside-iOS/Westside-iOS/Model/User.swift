@@ -26,4 +26,8 @@ class User: JSONInstantiable {
         imageUrl = try jsonObject.decode("imageUrl")
         roles = try jsonObject.decode("roles")
     }
+    
+    var fullName: String {
+        return firstName + " " + lastName
+    }
 }

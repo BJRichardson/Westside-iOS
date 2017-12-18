@@ -1,7 +1,7 @@
 import UIKit
 import Forge
 
-class EventDetailsController: UIViewController, UIScrollViewDelegate {
+class EventDetailsController: NavigatableViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
     
@@ -23,7 +23,8 @@ class EventDetailsController: UIViewController, UIScrollViewDelegate {
     
     init(event: Event) {
         self.event = event
-        super.init(nibName: nil, bundle: nil)
+        super.init()
+        //super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {

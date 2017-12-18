@@ -1,11 +1,11 @@
 import UIKit
 import Forge
 
-class MinistriesViewController: NavigatableViewController, UITableViewDataSource, UITableViewDelegate {
+class UsersViewController: NavigatableViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
-    private var ministries = Array<Group>()
+    private var users = Array<User>()
     
     init(title: String) {
         super.init()
@@ -23,21 +23,21 @@ class MinistriesViewController: NavigatableViewController, UITableViewDataSource
         
         tableView.alwaysBounceVertical = false
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(class: MinistryCell.self)
+        tableView.register(class: UserCell.self)
         tableView.isHidden = true
         tableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadMinistries()
+        loadUsers()
     }
     
     // MARK: - Actions
-    func loadMinistries(completion: ((URLResult<Array<Group>>) -> Void)? = nil) {
-        Store.sharedStore.fetchMinistries { [weak self] result in
+    func loadUsers(completion: ((URLResult<Array<User>>) -> Void)? = nil) {
+        Store.sharedStore.fetchUsers { [weak self] result in
             switch result {
-            case .value(let ministries, _):
-                self?.ministries = ministries
+            case .value(let users, _):
+                self?.users = users
                 self?.tableView?.reloadData()
                 completion?(result)
             case .error(let error):
@@ -47,11 +47,10 @@ class MinistriesViewController: NavigatableViewController, UITableViewDataSource
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.reusableCell() as MinistryCell
-        let ministry = ministries[indexPath.row]
+        let cell = tableView.reusableCell() as UserCell
+        let user = users[indexPath.row]
         
-        cell.nameLabel.text = ministry.name
-        cell.chairPersonLabel.text = ministry.chairPerson
+        cell.userNameLabel.text = user.fullName
         
         return cell
     }
@@ -61,11 +60,11 @@ class MinistriesViewController: NavigatableViewController, UITableViewDataSource
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ministries.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if (indexPath.row == ministries.count - 1) {
+        if (indexPath.row == users.count - 1) {
             loadingIndicator?.stopAnimating()
             tableView.isHidden = false
         }
@@ -74,9 +73,9 @@ class MinistriesViewController: NavigatableViewController, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let ministry = ministries[indexPath.row]
-        let ministryVC = MinistryViewController(ministry: ministry)
+        let user = users[indexPath.row]
+        let userVC = UserViewController(user: user)
         
-        navigationController?.pushViewController(ministryVC, animated: true)
+        navigationController?.pushViewController(userVC, animated: true)
     }
 }

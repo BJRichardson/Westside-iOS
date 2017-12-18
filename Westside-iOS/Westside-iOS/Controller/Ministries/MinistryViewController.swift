@@ -1,7 +1,7 @@
 import UIKit
 import Forge
 
-class MinistryViewController: UIViewController, UIScrollViewDelegate {
+class MinistryViewController: NavigatableViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
     
@@ -22,7 +22,8 @@ class MinistryViewController: UIViewController, UIScrollViewDelegate {
     
     init(ministry: Group) {
         self.ministry = ministry
-        super.init(nibName: nil, bundle: nil)
+        super.init()
+        //super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -25,7 +25,8 @@ class Store {
     
     var authedMenus: Array<Menu> {
         var menuItems: Array<Menu> = []
-        menuItems.append(Menu(title: "Ministries", destination: MinistriesViewController(title: "Ministries"), content: .view))
+        menuItems.append(Menu(title: "Ministries", destination: MinistriesViewController(title: "Ministries"), content: .push))
+        menuItems.append(Menu(title: "Members", destination: UsersViewController(title: "Memebers"), content: .push))
         menuItems.append(Menu(title: "Logout", destination: nil, content: .action(.logout)))
         return menuItems
     }
@@ -140,6 +141,17 @@ class Store {
             completion(result)
         }
         TransportGateway.defaultGateway.executeWithoutAuthentication(request)
+    }
+    
+    func fetchUsers(completion: @escaping (URLResult<Array<User>>) -> Void) {
+        let request: ResourceListRequest<User> = TransportGateway.defaultGateway.makeRequest(identifiers: ["users"])
+        request.completion = { result in
+            if case .value = result {
+                //self.saveContext()
+            }
+            completion(result)
+        }
+        TransportGateway.defaultGateway.enqueueForAuthentication(request)
     }
     
     func loginWith(username: String, password: String, completion: ((Error?) -> Void)?) {

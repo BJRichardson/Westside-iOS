@@ -157,21 +157,20 @@ class ContainerViewController: UIViewController, UINavigationControllerDelegate,
     
     // MARK: - UINavigationControllerDelegate
     
-    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController,
-                              animated: Bool) {
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController,animated: Bool) {
         if navigationController == contentNavigationController {
             setupContentNavBar(for: viewController)
         }
         
-        if (viewController is EventDetailsController
-            || viewController is MinistriesViewController
-            || viewController is MinistryViewController) {
+        if (viewController is NavigatableViewController) {
             viewController.navigationItem.leftBarButtonItem = nil
             
+        
             for var i in (0..<navigationController.viewControllers.count - 1) {
                 viewController.navigationItem.leftBarButtonItem = nil
                 navigationController.viewControllers[i].title = "Back"
             }
+            
         }
         
         navigationController.isNavigationBarHidden = false
