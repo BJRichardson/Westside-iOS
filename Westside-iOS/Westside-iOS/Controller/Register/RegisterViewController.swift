@@ -83,7 +83,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: IBActions
-    
     @IBAction func dismissView(_ sender: AnyObject) {
         delegate?.registrationDidCancel()
     }
